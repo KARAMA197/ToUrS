@@ -1,0 +1,272 @@
+[
+  {
+    "slug": "central-serengeti-safari-lodge",
+    "categoryKey": "safari",
+    "categoryLabel": "Safari lodge",
+    "title": "Central Serengeti safari lodge",
+    "location": "Central Serengeti",
+    "description": "A classic wildlife-focused stay with easy game-drive access and a comfortable base for private safari days.",
+    "overview": "This kind of stay works well for travelers who want to keep game viewing strong without making the safari feel rushed. It gives you a practical Serengeti base, comfortable evenings, and a route flow that suits classic private wildlife trips.",
+    "image": "/images/serengeti.png",
+    "accent": "linear-gradient(135deg, rgba(16,37,28,0.94), rgba(80,55,22,0.78))",
+    "priceTier": "Mid-range to luxury",
+    "priceGuide": "Often a mid-range to luxury safari stay. Final cost depends on season, room type, and how the Serengeti section fits into the wider route.",
+    "luxuryLevel": "Comfort to premium",
+    "stayStyle": "Private safari lodge",
+    "boardBasis": "Usually full board",
+    "idealFor": "First-time safari travelers, couples, classic wildlife routes",
+    "highlights": [
+      "Strong base for Serengeti game viewing",
+      "Good fit for private Northern Circuit trips",
+      "Comfortable stay after long safari days"
+    ],
+    "services": [
+      "Private room or suite",
+      "Full-board meal planning",
+      "Early breakfast support for game drives",
+      "Lounge or campfire-style evening space",
+      "Safari-ready departure timing"
+    ],
+    "locationHighlights": [
+      "Good access to major game-viewing areas",
+      "Works well with Serengeti-focused routes",
+      "Easier to combine with Ngorongoro and Tarangire"
+    ],
+    "goodFor": [
+      "Travelers who want strong wildlife days",
+      "Couples looking for a classic safari feel",
+      "Private trips where route flow matters"
+    ],
+    "planningAdvice": [
+      "Best chosen around migration timing and season",
+      "Works best when the Serengeti has enough nights to feel worthwhile",
+      "Can be matched to simpler or more upgraded comfort levels"
+    ],
+    "planningNote": "Best chosen around season, migration movement, and how many parks you want to combine."
+  },
+  {
+    "slug": "ngorongoro-rim-retreat",
+    "categoryKey": "safari",
+    "categoryLabel": "Safari retreat",
+    "title": "Ngorongoro rim retreat",
+    "location": "Ngorongoro area",
+    "description": "A cooler highland stay that works well before or after crater game drives and gives the safari a calmer pace.",
+    "overview": "This stay type adds a quieter and cooler mood to the safari. It works best for travelers who want Ngorongoro built into the trip in a way that feels restful instead of rushed.",
+    "image": "/images/serengeti.png",
+    "accent": "linear-gradient(135deg, rgba(21,45,34,0.94), rgba(120,95,62,0.78))",
+    "priceTier": "Mid-range to luxury",
+    "priceGuide": "Usually priced from solid mid-range to premium depending on crater access, room standard, and season.",
+    "luxuryLevel": "Comfort to premium",
+    "stayStyle": "Highland safari retreat",
+    "boardBasis": "Usually half board or full board",
+    "idealFor": "Travelers combining crater views, comfort, and slower pacing",
+    "highlights": [
+      "Good overnight base for Ngorongoro plans",
+      "Adds a cooler and quieter stop to the route",
+      "Works well with Serengeti and Tarangire"
+    ],
+    "services": [
+      "Comfortable room or cottage stay",
+      "Restaurant and evening lounge space",
+      "Early departure support for crater drives",
+      "Flexible fit before or after Serengeti",
+      "Private-trip friendly pacing"
+    ],
+    "locationHighlights": [
+      "Useful for Ngorongoro crater timing",
+      "Good for breaking longer road-flow sections",
+      "Can add a softer contrast to bush-heavy safari days"
+    ],
+    "goodFor": [
+      "Travelers who want crater access with more comfort",
+      "Families needing a calmer safari rhythm",
+      "Private groups mixing Serengeti and Ngorongoro"
+    ],
+    "planningAdvice": [
+      "Works best when crater timing is matched to the wider route",
+      "Good for travelers who do not want every night to feel the same",
+      "Often paired with Serengeti before returning toward Arusha"
+    ],
+    "planningNote": "This stay works best when the route balances crater timing with smoother transfer days."
+  },
+  {
+    "slug": "arusha-garden-hotel",
+    "categoryKey": "mountain",
+    "categoryLabel": "City and transit stay",
+    "title": "Arusha garden hotel",
+    "location": "Arusha",
+    "description": "A relaxed pre-safari or post-safari stay with space to rest, reset, and prepare for the next part of the trip.",
+    "overview": "This is the kind of stay that helps the trip start or finish well. It is useful for arrival nights, recovery nights, and routes where you want the first or last day to feel smooth and easy.",
+    "image": "/images/kilimanjaro.png",
+    "accent": "linear-gradient(135deg, rgba(16,37,28,0.9), rgba(92,73,48,0.74))",
+    "priceTier": "Budget to mid-range",
+    "priceGuide": "Usually fits budget to mid-range comfort, depending on location, room type, and whether the stay is just a short transit stop or a more restful base.",
+    "luxuryLevel": "Simple to comfortable",
+    "stayStyle": "Garden-style city hotel",
+    "boardBasis": "Usually bed and breakfast",
+    "idealFor": "Arrival nights, family trips, and travelers needing a smooth start",
+    "highlights": [
+      "Useful before safari departures",
+      "Easy fit for arrival or recovery nights",
+      "Can match simple or more upgraded comfort needs"
+    ],
+    "services": [
+      "Airport or town transfer coordination",
+      "Breakfast and easy arrival-night support",
+      "Comfortable rest before safari departure",
+      "Useful base for gear checks or last-minute prep",
+      "Flexible fit for one-night or short-city stays"
+    ],
+    "locationHighlights": [
+      "Works well for safari arrival flow",
+      "Useful before or after long travel days",
+      "Easier for travelers who want a soft landing"
+    ],
+    "goodFor": [
+      "Families arriving late into Tanzania",
+      "Travelers who do not want to rush straight into safari",
+      "Groups needing a simple city base before moving on"
+    ],
+    "planningAdvice": [
+      "Usually best as a short stay, not the main highlight",
+      "Good to pair with early safari departures or late arrivals",
+      "Can be upgraded if you want the first night to feel more special"
+    ],
+    "planningNote": "The right Arusha stay depends on your arrival time, safari departure plan, and comfort level."
+  },
+  {
+    "slug": "moshi-climb-base-lodge",
+    "categoryKey": "mountain",
+    "categoryLabel": "Climb base stay",
+    "title": "Moshi climb base lodge",
+    "location": "Moshi",
+    "description": "A practical and comfortable base for Kilimanjaro travelers who need rest, briefing time, and easy climb logistics.",
+    "overview": "This stay style suits travelers who need Kilimanjaro logistics to feel simple. It helps with rest before the climb, practical planning after arrival, and recovery after the mountain is done.",
+    "image": "/images/kilimanjaro.png",
+    "accent": "linear-gradient(135deg, rgba(14,32,25,0.92), rgba(140,112,74,0.76))",
+    "priceTier": "Mid-range",
+    "priceGuide": "Usually mid-range, with price changing mostly by room type, season, and how many pre- or post-climb nights you want.",
+    "luxuryLevel": "Comfort-focused",
+    "stayStyle": "Climb base lodge",
+    "boardBasis": "Usually bed and breakfast or half board",
+    "idealFor": "Kilimanjaro climbers, mixed mountain and safari trips",
+    "highlights": [
+      "Good fit before and after a climb",
+      "Easy to combine with safari or Zanzibar after the mountain",
+      "Comfortable base for trip preparation and recovery"
+    ],
+    "services": [
+      "Restful pre-climb and post-climb rooms",
+      "Space for climb briefing and gear organization",
+      "Meal planning around arrival or recovery days",
+      "Practical base for transfers and climb start timing",
+      "Useful recovery stop before a safari or beach finish"
+    ],
+    "locationHighlights": [
+      "Good for Kilimanjaro route logistics",
+      "Useful if you want recovery time after the climb",
+      "Easy to combine with a wider Tanzania route"
+    ],
+    "goodFor": [
+      "Climbers who want a simple but comfortable base",
+      "Travelers combining Kilimanjaro with safari",
+      "Groups who need recovery time before moving on"
+    ],
+    "planningAdvice": [
+      "Usually worth keeping at least one recovery night after the climb",
+      "Best planned around your route start and finish point",
+      "Can be kept practical or upgraded depending on comfort preference"
+    ],
+    "planningNote": "We usually match this stay to your route timing so the climb days and recovery days flow better."
+  },
+  {
+    "slug": "stone-town-boutique-stay",
+    "categoryKey": "beach",
+    "categoryLabel": "Historic town stay",
+    "title": "Stone Town boutique stay",
+    "location": "Stone Town, Zanzibar",
+    "description": "A character-filled Zanzibar stay that suits travelers who want culture, history, and an easy town base before or after the beach.",
+    "overview": "This stay style is best for travelers who want Zanzibar to include more than the beach. It adds atmosphere, old-town character, and a good short stop before moving to the coast or before flying out.",
+    "image": "/images/zanzibar.png",
+    "accent": "linear-gradient(135deg, rgba(15,45,54,0.92), rgba(120,90,54,0.76))",
+    "priceTier": "Mid-range to luxury",
+    "priceGuide": "Usually mid-range to luxury, depending on room style, historic property type, and how central you want the location to feel.",
+    "luxuryLevel": "Boutique comfort to premium",
+    "stayStyle": "Historic boutique stay",
+    "boardBasis": "Usually bed and breakfast",
+    "idealFor": "Short Zanzibar stops, mixed culture and coast trips",
+    "highlights": [
+      "Good fit before a beach transfer",
+      "Adds history and atmosphere to the route",
+      "Works well for shorter Zanzibar sections"
+    ],
+    "services": [
+      "Boutique-style rooms with character",
+      "Easy base for walking and exploring town",
+      "Breakfast and short-stay convenience",
+      "Good fit for arrival or departure nights",
+      "Useful bridge between safari and the beach"
+    ],
+    "locationHighlights": [
+      "Works well for short Zanzibar stopovers",
+      "Adds a cultural side to the trip",
+      "Good before or after a quieter beach section"
+    ],
+    "goodFor": [
+      "Travelers who want history and atmosphere",
+      "Couples wanting a shorter boutique-style stop",
+      "Trips that combine coast and culture"
+    ],
+    "planningAdvice": [
+      "Best paired with beach time rather than used as the only Zanzibar stay",
+      "Useful if your flight or ferry timing suits Stone Town first",
+      "Works well when you want variety in the Zanzibar section"
+    ],
+    "planningNote": "This stay is strongest when paired with beach time instead of being the only Zanzibar stop."
+  },
+  {
+    "slug": "zanzibar-beach-resort",
+    "categoryKey": "beach",
+    "categoryLabel": "Beach resort",
+    "title": "Zanzibar beach resort",
+    "location": "Zanzibar coast",
+    "description": "A softer beach finish for travelers who want to slow down after safari or Kilimanjaro and enjoy more rest by the ocean.",
+    "overview": "This is the classic Zanzibar finish for travelers who want the final part of the journey to feel slower, lighter, and more restful after wildlife or mountain days.",
+    "image": "/images/zanzibar.png",
+    "accent": "linear-gradient(135deg, rgba(10,62,72,0.92), rgba(190,150,86,0.72))",
+    "priceTier": "Mid-range to luxury",
+    "priceGuide": "Usually ranges from mid-range to luxury depending on beach area, room style, transfer time, and how private or resort-like you want the stay to feel.",
+    "luxuryLevel": "Comfort to luxury",
+    "stayStyle": "Beach resort stay",
+    "boardBasis": "Usually breakfast, half board, or full board",
+    "idealFor": "Honeymoons, recovery time, and safari-plus-beach journeys",
+    "highlights": [
+      "Great as a calm finish after wildlife or mountain days",
+      "Can be shaped around quieter or livelier beach areas",
+      "Works for both couples and private family trips"
+    ],
+    "services": [
+      "Beachfront or near-beach room options",
+      "Restaurant and relaxation-focused facilities",
+      "Pool or beach-led downtime",
+      "Good fit for recovery or honeymoon pacing",
+      "Flexible stay length depending on trip flow"
+    ],
+    "locationHighlights": [
+      "Adds a true coast finish to the trip",
+      "Best when matched to your preferred beach style",
+      "Can be quieter, livelier, more private, or more social"
+    ],
+    "goodFor": [
+      "Couples wanting a softer finish",
+      "Families needing slower days after safari",
+      "Travelers who want beach time to feel restful"
+    ],
+    "planningAdvice": [
+      "The right beach area matters just as much as the room standard",
+      "Good to match transfer time with how many nights you have",
+      "Often best when used as the final section of the route"
+    ],
+    "planningNote": "The best Zanzibar stay depends on beach style, transfer time, and how much rest you want at the end of the trip."
+  }
+]

@@ -1,0 +1,254 @@
+[
+  {
+    "slug": "classic-northern-circuit",
+    "title": "Classic Northern Circuit",
+    "subtitle": "Safari",
+    "description": "See some of Tanzania's best parks with a private guide, amazing wildlife, and a pace that feels easy.",
+    "duration": "7 days",
+    "price": "from $2,450",
+    "image": "/images/serengeti.png",
+    "accent": "Great for a first safari",
+    "iconKey": "compass",
+    "highlights": ["Private game drives", "Good wildlife viewing", "Easy pace"],
+    "overview": "This is a strong first safari for travelers who want famous parks, great wildlife, and a route that feels simple to follow. It gives you a good mix of variety and comfort without trying to do too much at once.",
+    "route": ["Arusha", "Tarangire", "Ngorongoro", "Central Serengeti", "Arusha"],
+    "goodFor": [
+      "First-time safari travelers",
+      "Couples and small private groups",
+      "Travelers who want a balanced pace",
+      "Guests who want strong wildlife viewing"
+    ],
+    "sampleFeatures": [
+      "Private guide and safari vehicle",
+      "Carefully paced park routing",
+      "Lodge or camp options by budget",
+      "Help before and during the trip"
+    ],
+    "planningNotes": [
+      "Easy to extend with Zanzibar after the safari",
+      "Works well for travelers with one week in Tanzania",
+      "Can be shaped for luxury or mid-range travel"
+    ],
+    "season": "Good most of the year, with strong wildlife viewing in dry months",
+    "pace": "Comfortable and balanced",
+    "stayStyle": "Safari lodges or tented camps",
+    "bestTripLength": "6 to 8 days works best for this route, with extra time if you want Zanzibar after the safari.",
+    "bestTime": "Dry-season months are strong for classic wildlife viewing, but the route can still work well in other good travel windows.",
+    "transportStyle": "Private road safari with a guide and vehicle from Arusha through the parks.",
+    "transferPlan": "Usually starts and ends around Arusha, with airport or town support stays before and after the parks if needed.",
+    "supportLevel": "Guided throughout, with help before arrival, during the safari, and for the next part of the trip after the parks.",
+    "accommodationLogic": "Often uses Arusha as the start point, then safari lodges or tented camps placed to keep the park flow smooth and the driving days realistic.",
+    "inclusions": [
+      "Private guide and safari vehicle",
+      "Park routing shaped around your dates",
+      "Stay options matched to your budget level",
+      "Pre-safari and on-route planning support"
+    ],
+    "exclusions": [
+      "International flights",
+      "Visa and travel insurance",
+      "Personal spending and tips",
+      "Extra nights or add-ons outside the agreed route"
+    ],
+    "sampleDays": [
+      {
+        "day": "Day 1",
+        "title": "Arrive in Arusha",
+        "description": "Arrive, rest, and get ready for the safari. This first night gives you time to settle in before the parks begin."
+      },
+      {
+        "day": "Day 2",
+        "title": "Drive to Tarangire",
+        "description": "Start with elephants, baobabs, and classic game viewing in Tarangire, then continue to your lodge for the night."
+      },
+      {
+        "day": "Day 3",
+        "title": "Ngorongoro area",
+        "description": "Travel toward the highlands and prepare for a full day in one of Tanzania's most famous wildlife areas."
+      },
+      {
+        "day": "Day 4",
+        "title": "Ngorongoro to Serengeti",
+        "description": "Enjoy wildlife viewing and continue on toward the Serengeti for the next part of the journey."
+      },
+      {
+        "day": "Day 5",
+        "title": "Full day in Serengeti",
+        "description": "Spend the day on game drives across the plains, looking for big cats and the wildlife the park is known for."
+      },
+      {
+        "day": "Day 6",
+        "title": "Final safari day",
+        "description": "Enjoy one more strong safari day, with time to slow down and take in the best moments of the trip."
+      },
+      {
+        "day": "Day 7",
+        "title": "Return and depart",
+        "description": "Travel back toward Arusha for your onward flight or the next part of your Tanzania journey."
+      }
+    ]
+  },
+  {
+    "slug": "machame-kilimanjaro-ascent",
+    "title": "Machame Kilimanjaro Ascent",
+    "subtitle": "Climb",
+    "description": "Climb Kilimanjaro with a strong team, a clear route, and good time to adjust to the altitude.",
+    "duration": "6 days",
+    "price": "from $1,950",
+    "image": "/images/kilimanjaro.png",
+    "accent": "Great for active travelers",
+    "iconKey": "mountain",
+    "highlights": ["Strong mountain team", "Time to adjust", "Private support"],
+    "overview": "This trip is built for travelers who want the challenge of Kilimanjaro with a route that gives good scenery, a clear climb rhythm, and steady support from the crew. It is active, rewarding, and best for guests who are ready for a real adventure.",
+    "route": ["Moshi", "Machame Gate", "Shira", "Barranco", "Barafu", "Summit", "Moshi"],
+    "goodFor": [
+      "Active travelers",
+      "Guests who want a famous African climb",
+      "Travelers who like mountain adventure",
+      "Private climbers or small groups"
+    ],
+    "sampleFeatures": [
+      "Experienced mountain support team",
+      "Camp-based climb structure",
+      "Altitude-focused daily rhythm",
+      "Pre-climb and post-climb planning help"
+    ],
+    "planningNotes": [
+      "Can be followed by safari or Zanzibar recovery time",
+      "Best for guests prepared for long walking days",
+      "Works well for travelers who want a strong challenge"
+    ],
+    "season": "Best in drier months with clearer mountain conditions",
+    "pace": "Demanding but steady",
+    "stayStyle": "Mountain camps during the climb",
+    "bestTripLength": "6 to 8 days on the mountain, plus extra nights in Moshi before or after the climb.",
+    "bestTime": "Best in drier months when mountain conditions are usually clearer and the climb flow feels more stable.",
+    "transportStyle": "Road transfers between Moshi, the gate, and the return point, with the climb itself run on foot with mountain crew support.",
+    "transferPlan": "Usually includes Moshi or Arusha support nights before the climb, plus return transfers after descent.",
+    "supportLevel": "Full mountain crew support with climb guidance, camp setup, meals on the route, and help with pre-climb logistics.",
+    "accommodationLogic": "Support stays are usually in Moshi before and after the climb, with mountain camps used during the ascent itself.",
+    "inclusions": [
+      "Mountain support crew and climb guidance",
+      "Camp-based mountain setup",
+      "Daily rhythm shaped around altitude adjustment",
+      "Pre-climb briefing and post-climb support"
+    ],
+    "exclusions": [
+      "International flights",
+      "Visa and travel insurance",
+      "Personal climbing gear or gear rental",
+      "Tips and personal spending"
+    ],
+    "sampleDays": [
+      {
+        "day": "Day 1",
+        "title": "Moshi briefing",
+        "description": "Arrive, meet the team, and prepare your gear before the climb begins."
+      },
+      {
+        "day": "Day 2",
+        "title": "Machame Gate to first camp",
+        "description": "Start the climb through forest paths and settle into the mountain rhythm with your crew."
+      },
+      {
+        "day": "Day 3",
+        "title": "Climb higher through changing views",
+        "description": "Gain altitude, enjoy wider views, and continue building strength for the summit push."
+      },
+      {
+        "day": "Day 4",
+        "title": "Barranco and acclimatization",
+        "description": "Move through one of the best-known sections of the route and continue adjusting to the mountain."
+      },
+      {
+        "day": "Day 5",
+        "title": "Final camp before summit",
+        "description": "Take a shorter day, rest, and get ready for the late-night summit attempt."
+      },
+      {
+        "day": "Day 6",
+        "title": "Summit and descend",
+        "description": "Push for the summit, celebrate the achievement, and begin the descent with the support of the team."
+      }
+    ]
+  },
+  {
+    "slug": "zanzibar-recovery-escape",
+    "title": "Zanzibar Recovery Escape",
+    "subtitle": "Beach stay",
+    "description": "Slow down by the sea, enjoy warm beaches, and add simple island fun if you want.",
+    "duration": "5 days",
+    "price": "from $1,200",
+    "image": "/images/zanzibar.png",
+    "accent": "Great after safari or for a honeymoon",
+    "iconKey": "waves",
+    "highlights": ["Beachfront stays", "Slow island pace", "Easy add-on"],
+    "overview": "This is a soft, easy trip for travelers who want to rest, reset, and enjoy the coast. It works especially well after safari or Kilimanjaro, and it can be kept very simple or made more special for a honeymoon feel.",
+    "route": ["Stone Town", "East Coast or North Coast", "Zanzibar Airport"],
+    "goodFor": [
+      "Post-safari relaxation",
+      "Honeymoons and couples",
+      "Travelers who want beach time without pressure",
+      "Guests who want a short coastal finish"
+    ],
+    "sampleFeatures": [
+      "Beachfront or boutique stay options",
+      "Easy transfer planning",
+      "Optional island activities",
+      "Flexible pace with room to rest"
+    ],
+    "planningNotes": [
+      "Very easy to add after safari or Kilimanjaro",
+      "Can be shaped for quiet beach time or light activity",
+      "Works well for honeymoon-style travel"
+    ],
+    "season": "Good most of the year, depending on rain and beach conditions",
+    "pace": "Slow and easy",
+    "stayStyle": "Boutique beach resort or relaxed coastal stay",
+    "bestTripLength": "4 to 6 days works well on its own or after safari or Kilimanjaro.",
+    "bestTime": "Works in many travel windows, with beach conditions and rainfall helping shape which coast feels best.",
+    "transportStyle": "Airport or ferry transfers with light island movement between Stone Town and your beach stay if you combine both.",
+    "transferPlan": "Usually starts with an arrival transfer, then beach or town connections, and ends with airport support on departure day.",
+    "supportLevel": "Planning help for transfers, stay choice, and optional light activities, while keeping the trip easy and flexible.",
+    "accommodationLogic": "Can be built around one main beach stay or split between Stone Town and the coast depending on your pace.",
+    "inclusions": [
+      "Beachfront or boutique stay planning",
+      "Arrival and departure transfer guidance",
+      "Optional island activity planning",
+      "Flexible island pace with space to rest"
+    ],
+    "exclusions": [
+      "International flights or island tickets outside the agreed plan",
+      "Optional excursions not included in the route",
+      "Personal spending and tips",
+      "Visa and travel insurance"
+    ],
+    "sampleDays": [
+      {
+        "day": "Day 1",
+        "title": "Arrive in Zanzibar",
+        "description": "Arrive on the island, transfer to your stay, and settle into a slower pace."
+      },
+      {
+        "day": "Day 2",
+        "title": "Beach day",
+        "description": "Take a full day to swim, rest, and enjoy the beach with no pressure to rush anywhere."
+      },
+      {
+        "day": "Day 3",
+        "title": "Optional island activity",
+        "description": "Add something light like Stone Town, a spice visit, or a short boat trip if you want more variety."
+      },
+      {
+        "day": "Day 4",
+        "title": "More time to relax",
+        "description": "Enjoy another slow day by the sea with time for food, sun, and quiet moments."
+      },
+      {
+        "day": "Day 5",
+        "title": "Departure",
+        "description": "Transfer to the airport or continue to your onward travel feeling rested and refreshed."
+      }
+    ]
+  }
+]

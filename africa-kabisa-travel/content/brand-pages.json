@@ -1,0 +1,489 @@
+{
+  "about": {
+    "eyebrow": "About Brilliant Explore Safaris",
+    "title": "Private Tanzania journeys shaped with clear advice, thoughtful pacing, and local insight.",
+    "description": "Brilliant Explore Safaris helps travelers plan Tanzania journeys with confidence. We shape private safaris, Kilimanjaro climbs, Zanzibar holidays, and tailor-made routes that bring the best of the country into one smooth experience.",
+    "introNote": "Every trip starts with the same question: what route, pace, and stay style will make the journey feel right for you?",
+    "companyIntro": [
+      "Brilliant Explore Safaris helps travelers plan Tanzania journeys with confidence. We shape private safaris, Kilimanjaro climbs, Zanzibar holidays, and tailor-made routes that bring the best of the country into one smooth experience.",
+      "We believe travel planning should feel simple, honest, and exciting. That is why we take time to understand your dates, budget, travel style, and what matters most to you. Whether you want wildlife, adventure, rest by the beach, or a mix of everything, we help shape a journey that feels right for you.",
+      "We keep the planning conversation clear from the first message. We are here to listen, guide, and help you build a Tanzania trip that matches your priorities instead of pushing a fixed package that does not fit.",
+      "Our goal is to give every traveler a journey that feels well planned, special, and full of real memories. With Brilliant Explore Safaris, you do not just book a trip. You start an experience designed with care."
+    ],
+    "planningStandards": [
+      {
+        "title": "Route-first advice",
+        "description": "We help you choose the right route before small details start to confuse the bigger picture."
+      },
+      {
+        "title": "Season and pace fit",
+        "description": "We shape the trip around your dates and how fast or slow you want the journey to feel."
+      },
+      {
+        "title": "Budget clarity",
+        "description": "We help match the route to the comfort level and budget range that make sense for you."
+      },
+      {
+        "title": "Practical support",
+        "description": "We keep communication clear before travel and stay helpful when the trip is underway."
+      }
+    ],
+    "servicesTitle": "The main Tanzania journeys we help shape.",
+    "serviceAreas": [
+      {
+        "title": "Safari planning",
+        "description": "We help travelers compare park combinations, trip length, road flow, and lodge style."
+      },
+      {
+        "title": "Kilimanjaro climbs",
+        "description": "We guide travelers toward routes, climb rhythm, and pre or post-climb planning that fit their goal."
+      },
+      {
+        "title": "Zanzibar finishes",
+        "description": "We help add beach time in a way that feels restful and connected to the rest of the trip."
+      },
+      {
+        "title": "Combined itineraries",
+        "description": "We help safari, mountain, and beach sections work together as one clear Tanzania journey."
+      }
+    ],
+    "checklistTitle": "These basics help us guide you faster.",
+    "checklistDescription": "You do not need every answer before reaching out. Dates, group size, and the type of trip you want are enough to start the conversation well.",
+    "checklistItems": [
+      "Your travel dates or rough travel window",
+      "How many people are traveling",
+      "Your budget range or comfort level",
+      "Whether you want safari, mountain, beach, or a mix",
+      "Any priorities like honeymoon travel, family travel, or a slower pace"
+    ],
+    "travelerTypesTitle": "We are strongest when the journey needs thought, not just a fixed package.",
+    "travelerTypesDescription": "Some travelers only need a short safari. Others need help balancing route, pace, comfort, season, or more than one part of Tanzania in one trip. That is where clear planning matters most.",
+    "travelerTypes": [
+      {
+        "title": "First-time safari travelers",
+        "description": "Often best with a classic route, clear timing, and wildlife areas that fit together well."
+      },
+      {
+        "title": "Couples and honeymoon trips",
+        "description": "Often best with private pacing, a strong safari core, and a softer beach finish."
+      },
+      {
+        "title": "Families and private groups",
+        "description": "Usually best with fewer stay changes, smoother road days, and more control over the daily pace."
+      },
+      {
+        "title": "Travelers combining experiences",
+        "description": "Often best with careful planning around travel flow between safari, Kilimanjaro, and Zanzibar."
+      }
+    ],
+    "startupEyebrow": "Planning approach",
+    "startupTitle": "Why direct, careful planning makes the trip feel stronger.",
+    "startupDescription": "We keep the planning conversation close to the route decisions so replies stay clear, flexible, and easy to follow from the first message onward.",
+    "startupStrengths": [
+      {
+        "title": "Direct communication",
+        "description": "You speak with a team that stays close to your inquiry and the route decisions being made."
+      },
+      {
+        "title": "Flexible planning",
+        "description": "We can shape the journey around your priorities instead of trying to force one fixed package."
+      },
+      {
+        "title": "More care per trip",
+        "description": "We focus on getting the route, pace, and comfort level right before you commit."
+      }
+    ],
+    "promiseTitle": "What you can expect from Brilliant Explore Safaris.",
+    "promiseItems": [
+      "Honest advice if a route, pace, or season does not fit your trip well",
+      "Clear communication instead of pressure and confusing sales talk",
+      "Careful support from the first message to the journey you finally choose"
+    ],
+    "teamEyebrow": "Who you work with",
+    "teamTitle": "The people handling your trip listen, guide, and stay close to the plan.",
+    "teamDescription": "We take time to understand your dates, budget, travel style, and what matters most to you before shaping the route, because good planning starts with listening well.",
+    "teamRoles": [
+      {
+        "title": "Trip planning",
+        "description": "Your first route direction, trip shape, and pace ideas are handled by the same planning side that follows your inquiry."
+      },
+      {
+        "title": "Route support",
+        "description": "We help compare safari regions, Kilimanjaro routes, Zanzibar timing, and how different parts of Tanzania fit together."
+      },
+      {
+        "title": "Clear communication",
+        "description": "Questions, changes, and next steps stay close to the people shaping your trip instead of getting lost in a long chain."
+      }
+    ],
+    "teamStructureEyebrow": "How the planning side works",
+    "teamStructureTitle": "Clear ownership matters when the trip is still taking shape.",
+    "teamStructureDescription": "Travelers should be able to understand who handles the conversation, the route logic, and the follow-up. That kind of clarity helps the planning feel more professional from the start.",
+    "teamStructureRoles": [
+      {
+        "title": "First conversation",
+        "description": "Your first message, travel basics, and trip priorities stay close to the planning side that starts shaping the route."
+      },
+      {
+        "title": "Route and stay matching",
+        "description": "Safari flow, Kilimanjaro timing, Zanzibar stays, and comfort level are looked at together instead of as separate sales items."
+      },
+      {
+        "title": "Changes and refinement",
+        "description": "If your dates, pace, or budget direction change, the same planning side can adjust the route without restarting the whole conversation."
+      },
+      {
+        "title": "Pre-travel clarity",
+        "description": "Before you move forward, the route, next step, and key planning logic should feel clear instead of scattered."
+      }
+    ],
+    "teamStructureNoteTitle": "What this should feel like for you",
+    "teamStructureNoteDescription": "A clearer planning setup should make the business feel easier to work with, more reliable, and more professional.",
+    "teamStructureNoteItems": [
+      "You should not need to explain your trip idea again and again.",
+      "Route questions should stay close to the people who are actually shaping the journey.",
+      "Changes should feel easier to track because the same planning conversation stays in view.",
+      "The next step should feel clearer before any commitment is expected."
+    ],
+    "teamNoteTitle": "What this should feel like for you",
+    "teamNoteItems": [
+      "You should not need to repeat your trip idea again and again",
+      "Your route questions should get simple and useful answers",
+      "The next step should feel clear before any commitment is made"
+    ],
+    "closingTitle": "The right Tanzania trip starts with the right planning.",
+    "closingDescription": "Whether you want wildlife, adventure, beach time, or a mix of everything, we help shape a journey that fits you. With Brilliant Explore Safaris, you do not just book a trip. You start an experience designed with care."
+  },
+  "contact": {
+    "eyebrow": "Talk to Brilliant Explore Safaris",
+    "title": "Tell us the kind of Tanzania trip you want, and we will guide you toward the right route.",
+    "description": "The best first message includes your dates, group size, budget range, and whether you want safari, Kilimanjaro, Zanzibar, or a mix. We focus on private Tanzania trip planning with clear advice and practical support.",
+    "cardTitles": [
+      "WhatsApp",
+      "Trip planning form",
+      "Reply time",
+      "Planning base"
+    ],
+    "cardDescriptions": [
+      "Best if you want a quick first chat or fast answers to early trip questions.",
+      "Best if you want to share dates, budget, and trip ideas in one clear request.",
+      "We reply with a clear first direction instead of a generic message.",
+      "We focus on Tanzania safari, Kilimanjaro, Zanzibar, and combined trip planning."
+    ],
+    "checklistTitle": "These basics help us reply with a better first route idea.",
+    "checklistItems": [
+      "Your travel dates or rough travel window",
+      "How many people are traveling",
+      "Your budget range or comfort level",
+      "Whether you want safari, Kilimanjaro, Zanzibar, or a mix",
+      "Any big priorities like honeymoon travel, family travel, or slower pacing"
+    ],
+    "checklistNote": "If you only know your dates and that you want safari, that is already enough to start.",
+    "serviceTitle": "We help plan Tanzania journeys across the country's best-known routes.",
+    "serviceDescription": "From northern safari circuits to Kilimanjaro climbs and Zanzibar finishes, we help shape one clear trip instead of a disconnected plan.",
+    "startupNoteTitle": "What to expect from us",
+    "startupNoteDescription": "Brilliant Explore Safaris keeps the planning process personal, clear, and close to your needs instead of pushing you through a large sales pipeline.",
+    "startupNoteItems": [
+      "A real person replies to your inquiry",
+      "We guide you toward the route that fits best",
+      "We tell you clearly what the next step is"
+    ],
+    "profilesTitle": "Public profiles and business listings.",
+    "profilesDescription": "Use our public profiles to confirm contact details and connect on the platform that suits you best."
+  },
+  "beforeYouBook": {
+    "eyebrow": "Before you book",
+    "title": "Know how the planning process works before you commit to a Tanzania trip.",
+    "description": "A good first reply should help you understand route shape, trip length, comfort level, and how your budget and dates affect the journey. It should not leave you guessing what happens next.",
+    "firstReplyTitle": "What a useful first reply should include",
+    "firstReplyItems": [
+      "A suggested route direction based on your dates and priorities",
+      "A clear idea of trip length, pace, and travel flow",
+      "Guidance on stay level or comfort style that fits your budget range",
+      "The best next step if you want to refine the route further"
+    ],
+    "priceTitle": "What usually changes the overall price",
+    "priceItems": [
+      "Travel season and how busy the dates are",
+      "Number of travelers in the group",
+      "Trip length and how many regions you want to combine",
+      "Stay style, comfort level, and how private you want the journey to feel"
+    ],
+    "processTitle": "What happens after you inquire",
+    "processSteps": [
+      {
+        "title": "You share the basics",
+        "description": "Dates, group size, budget range, and whether you want safari, Kilimanjaro, Zanzibar, or a mix."
+      },
+      {
+        "title": "We suggest a route direction",
+        "description": "We come back with a clearer idea of the route, travel pace, and the trip shape that fit you best."
+      },
+      {
+        "title": "We refine the plan together",
+        "description": "We adjust the route, trip length, and comfort level until the journey feels right."
+      },
+      {
+        "title": "You move forward with clarity",
+        "description": "Before any booking step, you should understand the route, the logic behind it, and what the next stage looks like."
+      }
+    ],
+    "planningTitle": "What good planning should protect you from",
+    "planningItems": [
+      "A route that tries to do too much in too little time",
+      "Long travel days that do not match the kind of trip you want",
+      "Choosing parks, beach time, or climb days that do not fit your dates well",
+      "Paying for a trip shape that is wrong for your pace or priorities"
+    ],
+    "ctaTitle": "If you want clarity before you book, start with your dates and priorities.",
+    "ctaDescription": "We can help shape the route in a simpler way before you commit to the next step."
+  },
+  "howWePlan": {
+    "eyebrow": "How we plan your trip",
+    "title": "We turn your dates, budget, and trip idea into a clear Tanzania route.",
+    "description": "A good planning process should make your next step easier. We start with your basics, look at season, pace, travel flow, and stay style, then guide you toward the route that fits best.",
+    "highlights": [
+      "Private Tanzania trip planning",
+      "Safari, Kilimanjaro, Zanzibar, and mixed trips",
+      "Clear replies and practical next steps"
+    ],
+    "processTitle": "The simple planning flow we follow.",
+    "processDescription": "We keep the process easy to understand so you always know what happens next.",
+    "processSteps": [
+      {
+        "title": "You share the basics",
+        "description": "Send your dates, group size, budget range, and the kind of trip you want."
+      },
+      {
+        "title": "We suggest a route direction",
+        "description": "We look at season, travel flow, and your priorities before recommending the strongest route idea."
+      },
+      {
+        "title": "We match stays and comfort level",
+        "description": "We suggest the stay style, pace, and trip level that fit your budget and travel style."
+      },
+      {
+        "title": "We refine the trip together",
+        "description": "If you want changes, we adjust the route, nights, and trip mix until the plan feels right."
+      },
+      {
+        "title": "We guide the next step clearly",
+        "description": "Before you commit, you should understand the route, what it includes, and what happens next."
+      }
+    ],
+    "fitTitle": "What we look at before we recommend a route.",
+    "fitDescription": "We do not treat every traveler or every season the same. These are some of the things we check first.",
+    "fitFactors": [
+      {
+        "title": "Your dates and season",
+        "description": "Some routes feel better at certain times of year, and some stay combinations work better with specific travel windows."
+      },
+      {
+        "title": "Your travel pace",
+        "description": "Some travelers want more time in fewer places, while others want to combine safari, mountain, and beach in one trip."
+      },
+      {
+        "title": "Your budget and comfort level",
+        "description": "We match the route and stay style to the level that makes sense for you instead of forcing one fixed package."
+      },
+      {
+        "title": "Travel flow and logistics",
+        "description": "We look at road time, flights, park order, and where support stays make the journey smoother."
+      }
+    ],
+    "replyTitle": "What you should get from a good first reply.",
+    "replyDescription": "A useful reply should not just repeat your message back to you. It should make the trip clearer.",
+    "replyPoints": [
+      "A route direction that matches your dates and priorities",
+      "A realistic idea of trip length and daily pace",
+      "Guidance on stay style and comfort level",
+      "A clear next step if you want to refine the plan further"
+    ],
+    "checklistTitle": "What helps us guide you faster.",
+    "checklistDescription": "You do not need every detail before reaching out. These basics are enough to start well.",
+    "checklistItems": [
+      "Your travel dates or rough travel window",
+      "How many people are traveling",
+      "Your budget range or comfort level",
+      "Whether you want safari, Kilimanjaro, Zanzibar, or a mix",
+      "Any priorities like honeymoon travel, family travel, or slower pacing"
+    ],
+    "closingTitle": "Clear planning should make you feel more confident, not more confused.",
+    "closingDescription": "If you tell us your basics, we can help you move from a rough idea to a clearer Tanzania trip plan with the right route, pace, and stay direction."
+  },
+  "knowBeforeYouGo": {
+    "eyebrow": "Know before you go",
+    "title": "Practical Tanzania trip tips that help you travel with more confidence.",
+    "description": "Good planning is not only about the route. It also helps you feel ready for arrival, safari rhythm, beach time, mountain conditions, and the small details that make the trip easier.",
+    "highlights": [
+      "Arrival and transfer basics",
+      "Packing and comfort tips",
+      "Money, connectivity, and practical travel notes"
+    ],
+    "arrivalTitle": "Arrival and first-night planning",
+    "arrivalDescription": "A smooth Tanzania trip usually starts with a calm first night and clear transfer planning.",
+    "arrivalPoints": [
+      "It often helps to keep your first and last night near the arrival or departure point.",
+      "Airport timing, road distance, and onward connections can affect the best route shape.",
+      "If you arrive late or travel after a long flight, a support night before the main trip usually feels better."
+    ],
+    "packingTitle": "What usually helps to pack",
+    "packingDescription": "The right packing list depends on safari, mountain, beach, and the season of your trip.",
+    "packingPoints": [
+      "Light layers work well because mornings, evenings, and altitude can feel cooler.",
+      "Comfortable shoes matter more than heavy luggage for most Tanzania trips.",
+      "Sun protection, personal medicine, and small day-use items usually make the trip much easier.",
+      "If your trip mixes safari, Kilimanjaro, and Zanzibar, it helps to pack for more than one pace and climate."
+    ],
+    "moneyTitle": "Money and daily practical details",
+    "moneyDescription": "Simple planning around spending and daily needs helps avoid small travel stress.",
+    "moneyPoints": [
+      "Card use, cash needs, and spending style can vary by area and by stay level.",
+      "It helps to plan for personal spending, tips, drinks, and any optional activities outside the route.",
+      "A little planning around payment comfort makes the trip feel easier once you are on the ground."
+    ],
+    "connectivityTitle": "Phone, internet, and communication",
+    "connectivityDescription": "Connection quality can change between town, safari areas, mountain sections, and the coast.",
+    "connectivityPoints": [
+      "Some parts of the trip feel well connected, while others are quieter and less connected by nature.",
+      "It helps to expect lighter communication during park drives, on the mountain, or in more remote stays.",
+      "We keep planning communication clear before the trip so you know what kind of connection to expect."
+    ],
+    "healthTitle": "Health, documents, and official checks",
+    "healthDescription": "Travel requirements can change, so official checks should always be part of final preparation.",
+    "healthPoints": [
+      "Passport, visa, vaccine, and insurance requirements should be checked through official sources before travel.",
+      "Airline rules and entry guidance can change, so it is best not to rely on old information.",
+      "If you are climbing or have specific health concerns, it helps to prepare early and ask the right questions."
+    ],
+    "rhythmTitle": "What the trip rhythm can feel like",
+    "rhythmDescription": "Different parts of Tanzania move differently, so it helps to know the feel before you arrive.",
+    "rhythmItems": [
+      {
+        "title": "Safari days",
+        "description": "Often start early and can include long but rewarding game-viewing days, with travel flow shaped by park distance."
+      },
+      {
+        "title": "Kilimanjaro days",
+        "description": "Usually depend on steady pace, simple routine, and preparation for changing weather and altitude."
+      },
+      {
+        "title": "Zanzibar days",
+        "description": "Often feel slower and softer, which is why many travelers use the island as recovery time after safari or climbing."
+      },
+      {
+        "title": "Combined trips",
+        "description": "Need extra thought so the journey does not feel rushed when safari, mountain, and beach are mixed together."
+      }
+    ],
+    "reminderTitle": "The goal is to arrive prepared, not overloaded.",
+    "reminderDescription": "You do not need to know every small detail alone. A good plan should cover the route, but it should also help you feel ready for the real travel experience around it.",
+    "ctaTitle": "If you want help preparing the full trip, start with your dates and travel idea.",
+    "ctaDescription": "We can guide both the route and the practical side so the journey feels clearer before you travel."
+  },
+  "responsibleTravel": {
+    "eyebrow": "Responsible travel",
+    "title": "We believe a good Tanzania trip should respect people, place, wildlife, and pace.",
+    "description": "Responsible travel does not need to feel complicated. For us, it means planning trips with care, giving honest advice, respecting wildlife and local life, and shaping journeys that feel right instead of rushed.",
+    "highlights": [
+      "Respect for wildlife and local places",
+      "Clear, low-pressure trip planning",
+      "Route choices shaped with care"
+    ],
+    "principlesTitle": "What responsible travel means in our work",
+    "principlesDescription": "These are simple standards we try to keep in the way we plan, communicate, and guide travelers.",
+    "principles": [
+      {
+        "title": "Respect the place",
+        "description": "Tanzania is not only a destination. It is home to local communities, working landscapes, and natural places that deserve care."
+      },
+      {
+        "title": "Do not force the route",
+        "description": "A better trip is not always the one with the most stops. We would rather suggest a clearer route than overload the journey."
+      },
+      {
+        "title": "Keep wildlife viewing respectful",
+        "description": "Safari should feel exciting without treating wildlife like a rushed checklist or a staged performance."
+      },
+      {
+        "title": "Keep advice honest",
+        "description": "If a route, budget, pace, or season does not fit well, we would rather say so clearly than push the wrong plan."
+      }
+    ],
+    "wildlifeTitle": "Wildlife respect matters",
+    "wildlifeDescription": "The best safari moments often come with patience, good guiding, and respect for the natural rhythm of the animals and the parks.",
+    "wildlifePoints": [
+      "We believe good safari planning should support calm, realistic wildlife viewing instead of rushed expectations.",
+      "The route should allow time to enjoy the parks well instead of trying to force too much into too few days.",
+      "A strong trip protects the experience by respecting distance, timing, and the natural pace of the landscape."
+    ],
+    "localTitle": "Local benefit starts with how trips are shaped",
+    "localDescription": "We want the trip to feel grounded in Tanzania and respectful of the people and places involved.",
+    "localPoints": [
+      "We plan Tanzania-focused journeys instead of treating the country like a quick add-on.",
+      "We value clear communication and practical support instead of detached mass-market sales talk.",
+      "We try to shape trips that feel connected to the real travel flow of the country, not just to what sounds impressive on paper."
+    ],
+    "planningTitle": "Responsible planning also means traveler care",
+    "planningDescription": "A route can look exciting on paper and still be wrong in real life. Responsible planning protects both the traveler and the experience.",
+    "planningPoints": [
+      "We try to avoid routes that feel too rushed for the number of days available.",
+      "We look at season, road flow, and energy level before suggesting how to combine safari, mountain, and beach time.",
+      "We explain the route in simple language so travelers know why it makes sense."
+    ],
+    "closingTitle": "The right trip should feel exciting, but it should also feel well considered.",
+    "closingDescription": "That is the kind of travel experience we want to help shape: memorable, respectful, and realistic from the first idea to the final route.",
+    "ctaTitle": "If you want a Tanzania trip shaped with care, start with your dates and priorities.",
+    "ctaDescription": "We can help you build a route that feels right for you and respectful to the place you are visiting."
+  },
+  "travelerProof": {
+    "eyebrow": "Traveler proof",
+    "title": "Real traveler proof should grow from real trips, not invented praise.",
+    "description": "We want this part of the brand to grow in a clean and believable way. That means showing real traveler feedback, real trip photos, and real public signals as they become available instead of filling the site with fake reviews.",
+    "sourcesTitle": "The strongest traveler proof usually comes from these places.",
+    "sources": [
+      {
+        "title": "Public reviews and profiles",
+        "description": "Public profile links and review platforms help visitors verify the brand outside the website itself."
+      },
+      {
+        "title": "Real traveler messages",
+        "description": "Short review text or trip feedback works best when it comes from real conversations and real journeys."
+      },
+      {
+        "title": "Traveler photos and trip moments",
+        "description": "Photo-backed proof helps future travelers picture the experience more clearly than generic sales talk."
+      },
+      {
+        "title": "Repeat contact and referrals",
+        "description": "When travelers come back, ask more questions, or recommend the business, that becomes trust proof too."
+      }
+    ],
+    "standardsTitle": "What we want to keep honest as this section grows.",
+    "standardsDescription": "A travel brand should still look professional without pretending to have years of public proof it does not yet own.",
+    "standards": [
+      "Only real traveler feedback should appear here.",
+      "Traveler names, photos, and trip notes should only be shown in a way that feels respectful and accurate.",
+      "We would rather show fewer real proof items than a long wall of fake-looking praise.",
+      "Public review links should match the same business identity shown across the site."
+    ],
+    "nowTitle": "What visitors can check right now.",
+    "nowDescription": "While the traveler-proof library is still growing, these are the clearest trust signals already available today.",
+    "nowPoints": [
+      "Direct contact paths through WhatsApp, email, and the trip planning form",
+      "Public social links that match the same business identity",
+      "A clear explanation of how trip planning works before any commitment",
+      "Route and stay pages that explain what happens after inquiry and what the first reply should include"
+    ],
+    "closingTitle": "The goal is simple: proof that feels real, useful, and easy to trust.",
+    "closingDescription": "As traveler feedback, review links, and trip photos grow, this page can become the place where visitors see the strongest public proof behind the planning experience."
+  },
+  "footer": {
+    "description": "Private Tanzania trip planning for safari, Kilimanjaro, Zanzibar, and combined journeys shaped around your dates, pace, and budget.",
+    "whatsappDescription": "Start with a quick planning message on",
+    "contactTitle": "Tanzania planning",
+    "contactDescription": "See contact details, service areas, and the best way to reach us.",
+    "emailTitle": "Email planning",
+    "bottomNote": "Clear route guidance for safari, Kilimanjaro, and Zanzibar travel."
+  }
+}

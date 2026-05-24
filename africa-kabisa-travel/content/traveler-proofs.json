@@ -1,0 +1,32 @@
+[
+  {
+    "slug": "first-real-review-slot",
+    "isPublished": false,
+    "type": "review",
+    "title": "First real traveler review",
+    "summary": "Replace this with a short real review only after the traveler has given permission for it to appear publicly.",
+    "sourceLabel": "Add the real source here",
+    "tripLabel": "Add the real route or trip type here",
+    "proofNote": "Keep the wording short, clear, and close to what the traveler actually said."
+  },
+  {
+    "slug": "first-trip-photo-story-slot",
+    "isPublished": false,
+    "type": "photo",
+    "title": "First traveler photo story",
+    "summary": "Use this for a real traveler photo moment with a short note that explains the trip or place shown.",
+    "sourceLabel": "Add the real source here",
+    "tripLabel": "Add the real route or stay here",
+    "proofNote": "Only publish real traveler images when you are comfortable sharing them publicly."
+  },
+  {
+    "slug": "first-public-proof-note-slot",
+    "isPublished": false,
+    "type": "public-signal",
+    "title": "First public proof note",
+    "summary": "Use this for a real public signal such as a verified review profile, a clear trip mention, or a strong repeat-traveler note.",
+    "sourceLabel": "Add the real source here",
+    "tripLabel": "Add the real trip context here",
+    "proofNote": "Public signals should stay easy to verify and should match the same business identity shown on the site."
+  }
+]

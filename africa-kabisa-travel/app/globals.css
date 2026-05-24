@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f7f0e4;
+  --foreground: #132018;
+  --surface: #fffaf3;
+  --forest: #0f2c24;
+  --forest-soft: #183a31;
+  --gold: #c89a46;
+  --gold-soft: #e4c78f;
+  --sand: #efe0c4;
+  --mist: #dfe8df;
+  --border: rgba(19, 32, 24, 0.12);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, rgba(200, 154, 70, 0.22), transparent 28%),
+    radial-gradient(circle at 85% 10%, rgba(15, 44, 36, 0.12), transparent 26%),
+    linear-gradient(180deg, #fbf5ea 0%, #f7f0e4 55%, #f3eadb 100%);
+  color: var(--foreground);
+  font-family: Aptos, "Trebuchet MS", "Segoe UI", sans-serif;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(255, 255, 255, 0.32), transparent 24%),
+    radial-gradient(circle at 80% 0%, rgba(200, 154, 70, 0.12), transparent 24%);
+  z-index: -1;
+}
+
+::selection {
+  background: rgba(200, 154, 70, 0.3);
+  color: var(--foreground);
+}
+
+.font-display {
+  font-family: Georgia, "Times New Roman", serif;
+  letter-spacing: -0.03em;
+}

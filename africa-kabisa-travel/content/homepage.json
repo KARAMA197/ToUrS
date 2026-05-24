@@ -1,0 +1,328 @@
+{
+  "hero": {
+    "eyebrow": "Brilliant Explore Safaris | Private Tanzania Travel",
+    "title": "Private Tanzania journeys planned with clear advice, smooth flow, and the right pace for you.",
+    "description": "Brilliant Explore Safaris helps travelers shape safari, Kilimanjaro, Zanzibar, and combined routes with careful guidance on season, comfort, timing, and how the whole journey fits together.",
+    "highlights": [
+      {
+        "title": "Tanzania-based planning",
+        "description": "We use local route knowledge to guide you toward what makes sense in real travel, not only on paper."
+      },
+      {
+        "title": "Private trip design",
+        "description": "Your route is shaped around your dates, group size, travel pace, and comfort range."
+      },
+      {
+        "title": "One smooth journey",
+        "description": "We help safari, mountain, and beach time fit together in a way that feels natural and well paced."
+      }
+    ],
+    "journeyNotes": [
+      {
+        "title": "A strong first route idea",
+        "description": "We reply with a route direction that helps the trip make sense instead of sending a generic package list."
+      },
+      {
+        "title": "Refined around your pace",
+        "description": "We help you decide what matters most, then adjust the route around the pace and comfort you want."
+      }
+    ],
+    "featuredJourneyEyebrow": "Start with a strong route",
+    "featuredJourneyTitle": "A clear route first. Then we shape the details around you.",
+    "featuredJourneyDescription": "Use a well-balanced Tanzania route as the starting point, then refine the trip length, stay level, and overall rhythm around your own priorities."
+  },
+  "trust": {
+    "eyebrow": "Travel with confidence",
+    "title": "Direct planning can make the trip clearer from the start.",
+    "description": "Brilliant Explore Safaris keeps the planning process clear, personal, and focused on the route that fits you best instead of pushing a fixed sales flow.",
+    "points": [
+      {
+        "title": "Direct communication",
+        "description": "You speak with a team that stays close to your inquiry and your route decisions from the start."
+      },
+      {
+        "title": "Flexible route planning",
+        "description": "We shape the trip around your dates, your group, and your budget instead of forcing you into one fixed route."
+      },
+      {
+        "title": "Clear first response",
+        "description": "You hear from a real person within 24 hours with a useful first direction for your journey."
+      },
+      {
+        "title": "Support that stays personal",
+        "description": "We stay available while the trip is being shaped and while you are in Tanzania if you need help."
+      }
+    ],
+    "faqEyebrow": "Quick FAQ",
+    "faqTitle": "Main questions, clear answers.",
+    "faqDescription": "These are the questions many travelers ask before choosing a Tanzania route and reaching out for planning help.",
+    "faqs": [
+      {
+        "question": "Who plans the trip?",
+        "answer": "Your journey is shaped by a Tanzania-based planning team with practical knowledge of route flow, season, and trip design."
+      },
+      {
+        "question": "How personal is the planning process?",
+        "answer": "We keep the planning conversation direct and flexible so the route can stay close to your dates, pace, and travel priorities."
+      },
+      {
+        "question": "Can you combine safari, Kilimanjaro, and Zanzibar?",
+        "answer": "Yes. We can help build one trip that combines wildlife, mountain, and beach time in a way that feels smooth."
+      },
+      {
+        "question": "Do you help with different budgets?",
+        "answer": "Yes. We can suggest route and stay options that fit luxury, mid-range, or more careful budgets."
+      },
+      {
+        "question": "Can the trip be private?",
+        "answer": "Yes. We focus on private trip planning so the pace and overall shape can fit your own group."
+      },
+      {
+        "question": "Will someone help during the trip?",
+        "answer": "Yes. We stay available for support before travel and while you are in Tanzania if you need help."
+      },
+      {
+        "question": "How do I start?",
+        "answer": "The best first step is to send your dates, group size, budget range, and what kind of trip you want."
+      }
+    ],
+    "ctaEyebrow": "Best way to start",
+    "ctaText": "Send your dates, group size, and priorities. We will reply with the route idea that fits you best.",
+    "ctaLinkLabel": "Get my first route idea"
+  },
+  "whyChoose": {
+    "eyebrow": "Why choose us",
+    "title": "Personal planning. Clearer route advice.",
+    "description": "We stay close to each inquiry so the route advice can stay careful, flexible, and easy to follow.",
+    "benefits": [
+      {
+        "title": "Direct contact",
+        "description": "You are not passed through a long chain before your trip starts to make sense."
+      },
+      {
+        "title": "Route-first advice",
+        "description": "We help you choose the right route before small details start to distract from the bigger plan."
+      },
+      {
+        "title": "Planning for real budgets",
+        "description": "We shape the trip around the comfort level and budget range that actually work for you."
+      },
+      {
+        "title": "Practical support",
+        "description": "We keep communication clear and stay helpful through planning and during travel when needed."
+      }
+    ],
+    "processEyebrow": "How we plan",
+    "processTitle": "A simple planning process with fewer hand-offs.",
+    "processSteps": [
+      "We ask for your dates, group size, budget range, and what kind of journey you want.",
+      "We suggest the route, pace, and trip shape that fit those priorities best.",
+      "We refine the plan with you until the journey feels right."
+    ],
+    "processCtaLabel": "See how we plan Tanzania trips"
+  },
+  "featuredPackages": {
+    "eyebrow": "Sample journeys",
+    "title": "Private Tanzania routes you can start from.",
+    "description": "These are starting-point journeys, not fixed packages. We can adjust them around your dates, pace, comfort level, and priorities.",
+    "helpEyebrow": "Need help choosing?",
+    "helpText": "Tell us your dates, group size, and budget range. We can guide you toward the sample route that fits you best before anything is finalized.",
+    "browseLabel": "See all sample journeys",
+    "chooseLabel": "Help me choose a route"
+  },
+  "travelStyles": {
+    "eyebrow": "Travel styles",
+    "title": "Choose the kind of Tanzania trip you want first, then shape the route around it.",
+    "description": "Some travelers start with a place. Others start with a travel style. These are some of the strongest ways to begin planning so the route, pace, and stay level make sense from the start.",
+    "styles": [
+      {
+        "title": "Private safari journeys",
+        "description": "Classic wildlife travel built around game viewing, strong park flow, and the right number of nights in each area.",
+        "bestFor": "First-time safari travelers, photographers, and private groups who want a strong Tanzania classic.",
+        "routeLabel": "Safari route direction",
+        "routeHref": "/journeys/classic-northern-circuit",
+        "actionLabel": "See safari route",
+        "actionHref": "/custom-itinerary"
+      },
+      {
+        "title": "Kilimanjaro climbs",
+        "description": "Climb-focused journeys shaped around route choice, pace, recovery time, and what should happen before and after the mountain.",
+        "bestFor": "Active travelers who want a clear climb route and practical support around the effort.",
+        "routeLabel": "Mountain route direction",
+        "routeHref": "/journeys/machame-kilimanjaro-ascent",
+        "actionLabel": "See climb route",
+        "actionHref": "/custom-itinerary"
+      },
+      {
+        "title": "Zanzibar holidays",
+        "description": "Coast-focused planning for travelers who want rest, beach rhythm, Stone Town, or a lighter standalone escape.",
+        "bestFor": "Couples, recovery travel, and travelers who want a gentler pace by the coast.",
+        "routeLabel": "Beach route direction",
+        "routeHref": "/journeys/zanzibar-recovery-escape",
+        "actionLabel": "See Zanzibar route",
+        "actionHref": "/custom-itinerary"
+      },
+      {
+        "title": "Combined Tanzania trips",
+        "description": "Safari, mountain, and beach time planned as one journey so the transitions feel smooth instead of disconnected.",
+        "bestFor": "Travelers who want more than one experience and need help making the route flow well.",
+        "routeLabel": "Combination planning",
+        "routeHref": "/travel-guides/tanzania-safari-planning-guide",
+        "actionLabel": "See trip planning guide",
+        "actionHref": "/custom-itinerary"
+      },
+      {
+        "title": "Family Tanzania travel",
+        "description": "Route choices that work better for mixed ages, smoother pacing, and stays that make the journey easier to enjoy together.",
+        "bestFor": "Families who want comfort, practical pacing, and a route that does not feel too rushed.",
+        "routeLabel": "Family-friendly route",
+        "routeHref": "/travel-guides/family-safari-guide",
+        "actionLabel": "See family guide",
+        "actionHref": "/custom-itinerary"
+      },
+      {
+        "title": "Honeymoon and romantic trips",
+        "description": "Safari and beach journeys shaped around privacy, atmosphere, and the kind of balance many couples want.",
+        "bestFor": "Couples who want a trip that feels special, calm, and well paced from start to finish.",
+        "routeLabel": "Romantic route direction",
+        "routeHref": "/travel-guides/tanzania-honeymoon-guide",
+        "actionLabel": "See honeymoon guide",
+        "actionHref": "/custom-itinerary"
+      }
+    ],
+    "routeIdeasEyebrow": "More route ideas at a glance",
+    "routeIdeasTitle": "Popular trip directions travelers often compare before they ask.",
+    "routeIdeas": [
+      {
+        "title": "Northern safari only",
+        "duration": "5 to 7 days",
+        "description": "A cleaner classic for travelers who want wildlife first and a simple route flow."
+      },
+      {
+        "title": "Safari and Zanzibar",
+        "duration": "8 to 10 days",
+        "description": "A popular split between adventure and beach time, especially for couples and honeymoon trips."
+      },
+      {
+        "title": "Kilimanjaro and recovery",
+        "duration": "8 days or more",
+        "description": "Climb first, then add a slower finish with safari or coast depending on your energy and dates."
+      },
+      {
+        "title": "Family safari flow",
+        "duration": "6 to 9 days",
+        "description": "Designed around smoother pacing, fewer tiring changes, and stays that fit shared travel."
+      }
+    ]
+  },
+  "planningGuide": {
+    "eyebrow": "Planning notes",
+    "title": "Helpful Tanzania trip guidance before you commit.",
+    "description": "Use these notes to think through season, trip length, comfort level, and the kind of route that fits you best.",
+    "advisorEyebrow": "Need help choosing the right route?",
+    "advisorTitle": "Tell us what matters most for your trip.",
+    "advisorDescription": "Share your dates, group size, budget range, and whether you want safari, mountain, beach, or a mix. We will guide you toward the route that makes the most sense.",
+    "advisorPoints": [
+      "Useful for first-time safari travelers who want clearer direction.",
+      "Helpful for couples, families, and private groups with different priorities.",
+      "Good if you only know your dates and want help shaping the rest."
+    ],
+    "advisorPrimaryLabel": "Help me choose my trip",
+    "advisorSecondaryLabel": "Read our travel guides"
+  },
+  "bookWithConfidence": {
+    "eyebrow": "Book with confidence",
+    "title": "Know what a strong first quotation and planning process should give you.",
+    "description": "Travelers feel more comfortable moving forward when pricing, trip flow, and the next steps are explained clearly. Before you commit, these are the things that should make sense.",
+    "checkpoints": [
+      "You should understand what affects the final price before you are asked to decide.",
+      "You should know what is included, what is not, and which details are still being refined.",
+      "You should know what happens after inquiry, after quotation, and after you ask for changes.",
+      "You should be able to compare route direction, stay level, and trip pace without pressure."
+    ],
+    "blocks": [
+      {
+        "title": "Quotation basis",
+        "description": "A useful quotation should match your route direction, number of travelers, expected trip length, stay level, and travel date."
+      },
+      {
+        "title": "What changes the price",
+        "description": "Season, comfort level, number of nights, park mix, transfer logic, and the kind of stay you choose all shape the final rate."
+      },
+      {
+        "title": "What we confirm first",
+        "description": "We first help confirm route shape, pacing, and stay direction before trying to lock small details too early."
+      },
+      {
+        "title": "Support after inquiry",
+        "description": "You should know how the planning conversation continues, how changes are handled, and what the next response should include."
+      }
+    ],
+    "nextSteps": [
+      {
+        "title": "Send your trip basics",
+        "description": "Share your dates, group size, and whether safari, mountain, beach, or a mix matters most."
+      },
+      {
+        "title": "Review the first route direction",
+        "description": "We come back with the route shape, pace, and stay logic that make the trip most workable."
+      },
+      {
+        "title": "Refine the quotation with us",
+        "description": "Once the route direction is right, we refine comfort level, timing, and the details that affect the final quotation."
+      }
+    ],
+    "primaryLabel": "Read before you book",
+    "secondaryLabel": "Contact us directly"
+  },
+  "testimonials": {
+    "eyebrow": "What should feel strong",
+    "title": "The planning experience should feel clear before you commit.",
+    "description": "These are some of the things travelers should be able to feel early if the trip planning is being handled well.",
+    "reviews": [
+      {
+        "name": "Useful first direction",
+        "country": "Planning standard",
+        "trip": "A reply that helps",
+        "quote": "The first reply should not only thank you for reaching out. It should help you understand the route direction, pace, and the strongest next step for your trip."
+      },
+      {
+        "name": "Route logic you can understand",
+        "country": "Planning standard",
+        "trip": "Clear reasons behind the route",
+        "quote": "A strong trip plan should make sense when it is explained. You should understand why the route fits your season, your priorities, and the kind of pace you want."
+      },
+      {
+        "name": "Easy next step",
+        "country": "Planning standard",
+        "trip": "No pressure, clear contact",
+        "quote": "Before any commitment, it should feel easy to come back with questions, refine the route, and keep the same planning conversation moving forward."
+      }
+    ]
+  },
+  "finalCta": {
+    "eyebrow": "Start with your dates and travel style",
+    "title": "Tell us the trip you have in mind. We will shape a clear first route.",
+    "description": "You do not need a full brief to start. A few details are enough for us to recommend the right direction for your Tanzania journey.",
+    "decisionNotes": [
+      "Reply within 24 hours",
+      "Private trip planning",
+      "No pressure first contact"
+    ],
+    "whatsappLabel": "Talk on WhatsApp",
+    "nextActions": [
+      {
+        "title": "Share dates and group size",
+        "description": "Tell us when you want to travel and how many people are in your group."
+      },
+      {
+        "title": "Tell us your priorities",
+        "description": "Share your budget range and whether safari, mountain, beach, or a mix matters most."
+      },
+      {
+        "title": "Review your first route idea",
+        "description": "We come back with a clear direction you can refine with us."
+      }
+    ]
+  }
+}

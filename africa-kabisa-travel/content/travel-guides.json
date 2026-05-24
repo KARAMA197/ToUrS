@@ -1,0 +1,257 @@
+[
+  {
+    "slug": "tanzania-safari-planning-guide",
+    "category": "Safari guide",
+    "title": "Tanzania Safari Planning Guide",
+    "description": "Simple advice on when to go, how long to stay, and how to choose the right safari route in Tanzania.",
+    "image": "/images/serengeti.png",
+    "accent": "Best for first-time safari planning",
+    "iconKey": "compass",
+    "summary": "Tanzania safari planning gets easier when you start with route, season, and pace. This guide keeps the big choices simple, so you can build a trip that feels exciting without feeling too full.",
+    "bestTime": "Dry months are popular, but green months can still work very well",
+    "idealLength": "5 to 8 days",
+    "goodFor": "First-time safari travelers",
+    "highlights": ["Route choice", "Season planning", "Budget levels"],
+    "sections": [
+      {
+        "title": "Choose the route before the extras",
+        "body": "Most first-time travelers do best with a northern Tanzania safari because the route is simple to understand and the wildlife areas are easy to combine. Start with the route first, then add comfort level and extras after that."
+      },
+      {
+        "title": "Match the season to your goal",
+        "body": "Dry periods are popular for wildlife viewing and easier road conditions, but greener periods can feel quieter and very beautiful. The right answer depends on your dates and what kind of safari feel you want."
+      },
+      {
+        "title": "Keep the pace comfortable",
+        "body": "A strong safari is not about adding the most parks. It is usually better to choose fewer areas, keep drive times reasonable, and give yourself time to enjoy the good moments properly."
+      }
+    ],
+    "tips": [
+      "Know your travel dates before choosing parks.",
+      "Share your group size and budget range early.",
+      "Decide whether you want a classic first safari or a more remote feel.",
+      "Choose comfort and good pacing over trying to do everything."
+    ],
+    "faqs": [
+      {
+        "question": "Can I do a strong safari in one week?",
+        "answer": "Yes. One week is enough for a very good first safari if the route is planned well and not overloaded."
+      },
+      {
+        "question": "Should I add Zanzibar after safari?",
+        "answer": "Often yes. A few beach nights after safari can make the whole trip feel more balanced and restful."
+      },
+      {
+        "question": "Can safari work well for families?",
+        "answer": "Yes. Families usually do best with a private vehicle, smoother pacing, and fewer stay changes."
+      }
+    ],
+    "relatedJourneySlug": "classic-northern-circuit",
+    "ctaTitle": "Need help choosing the right safari route?",
+    "ctaText": "Send your dates, group size, and budget, and we will point you toward the safari plan that fits best."
+  },
+  {
+    "slug": "kilimanjaro-climb-guide",
+    "category": "Mountain guide",
+    "title": "Kilimanjaro Climb Guide",
+    "description": "Clear planning advice on route length, altitude rhythm, and how to prepare for a Kilimanjaro climb.",
+    "image": "/images/kilimanjaro.png",
+    "accent": "Best for route and prep questions",
+    "iconKey": "mountain",
+    "summary": "Kilimanjaro planning is about more than choosing a date. Route length, support, recovery time, and altitude rhythm all affect how the climb feels. This guide helps you make the big decisions with more confidence.",
+    "bestTime": "Drier months are usually preferred for mountain conditions",
+    "idealLength": "6 to 9 days on the mountain",
+    "goodFor": "Active travelers with a summit goal",
+    "highlights": ["Route length", "Altitude rhythm", "Recovery planning"],
+    "sections": [
+      {
+        "title": "Choose the route by pace, not by pride",
+        "body": "Many travelers focus too quickly on the shortest route. In reality, a route with better pacing and more time to adjust can feel much stronger than one that only looks faster on paper."
+      },
+      {
+        "title": "Train for steady days, not speed",
+        "body": "Kilimanjaro is more about consistent walking, recovery, and altitude than fast hiking. Good preparation means building stamina, getting used to long days, and arriving well rested."
+      },
+      {
+        "title": "Plan the finish before the climb starts",
+        "body": "A climb usually feels better when you already know what comes after it. Many travelers do well with a recovery stay, Zanzibar time, or a safari after the mountain."
+      }
+    ],
+    "tips": [
+      "Choose a route with a sensible acclimatization rhythm.",
+      "Arrive before the climb and leave room for a briefing day.",
+      "Pack for cold nights, sun, and changing conditions.",
+      "Add recovery time after the summit instead of flying out too fast."
+    ],
+    "faqs": [
+      {
+        "question": "Which route is good for many first-time climbers?",
+        "answer": "A route with a stronger altitude rhythm is often the best choice for first-time climbers who want a better overall climb experience."
+      },
+      {
+        "question": "Can the climb be private?",
+        "answer": "Yes. A private climb is often the best fit for travelers who want their own pace and team support."
+      },
+      {
+        "question": "Can I add safari after Kilimanjaro?",
+        "answer": "Yes. Many travelers add safari or Zanzibar after the climb to turn the trip into a bigger Tanzania journey."
+      }
+    ],
+    "relatedJourneySlug": "machame-kilimanjaro-ascent",
+    "ctaTitle": "Want help choosing your climb plan?",
+    "ctaText": "Tell us your dates, fitness level, and how challenging you want the trip to feel, and we will guide you toward the right route."
+  },
+  {
+    "slug": "zanzibar-add-on-guide",
+    "category": "Beach guide",
+    "title": "Zanzibar Add-On Guide",
+    "description": "Easy planning advice for adding Zanzibar after safari or Kilimanjaro, with simple help on timing and island pace.",
+    "image": "/images/zanzibar.png",
+    "accent": "Best for safari plus beach planning",
+    "iconKey": "waves",
+    "summary": "Zanzibar is one of the easiest ways to soften a safari or climb with a few slower days by the sea. The key choice is how much beach time you want and what kind of island pace feels right for your trip.",
+    "bestTime": "Works well most of the year, with weather checked around your dates",
+    "idealLength": "3 to 5 nights",
+    "goodFor": "Couples, post-safari travelers, and shorter add-ons",
+    "highlights": ["Beach timing", "Coast choice", "Easy recovery"],
+    "sections": [
+      {
+        "title": "Zanzibar works best as a soft finish",
+        "body": "Most travelers enjoy Zanzibar most after safari or Kilimanjaro, not before. It gives the trip a calmer ending and helps balance the energy of the earlier part of the journey."
+      },
+      {
+        "title": "Choose beach-only or Stone Town plus coast",
+        "body": "Some travelers want a simple beach stay, while others enjoy one night of history and atmosphere in Stone Town first. The best choice depends on your pace and how much movement you want."
+      },
+      {
+        "title": "Keep the island days simple",
+        "body": "Zanzibar does not need to be full of activities to feel special. A few beach days, good food, and one or two light extras are often enough for a strong finish."
+      }
+    ],
+    "tips": [
+      "Three to five nights is enough for many travelers.",
+      "Choose the coast based on the atmosphere you want, not just the map.",
+      "Do not overfill your beach days with too many activities.",
+      "Treat Zanzibar as a rest and reset part of the trip."
+    ],
+    "faqs": [
+      {
+        "question": "Is three nights in Zanzibar enough?",
+        "answer": "Yes. Three nights can work very well if you want a shorter beach finish after safari or Kilimanjaro."
+      },
+      {
+        "question": "Is Zanzibar good for honeymoon travel?",
+        "answer": "Yes. It is one of the strongest add-ons for couples who want slower days, privacy, and a softer ending."
+      },
+      {
+        "question": "Can I add Zanzibar after Kilimanjaro?",
+        "answer": "Yes. Zanzibar is a popular recovery add-on after the mountain because it gives you time to rest and enjoy the coast."
+      }
+    ],
+    "relatedJourneySlug": "zanzibar-recovery-escape",
+    "ctaTitle": "Want help adding Zanzibar the right way?",
+    "ctaText": "Tell us how many nights you have and what kind of beach feel you want, and we will recommend the best island finish."
+  },
+  {
+    "slug": "tanzania-honeymoon-guide",
+    "category": "Honeymoon guide",
+    "title": "Tanzania Honeymoon Guide",
+    "description": "Simple advice for couples planning a Tanzania honeymoon with safari, beach time, and a smooth private pace.",
+    "image": "/images/zanzibar.png",
+    "accent": "Best for couples wanting safari and beach",
+    "iconKey": "heart",
+    "summary": "A Tanzania honeymoon works best when it feels private, smooth, and unhurried. Most couples do best with a strong safari, a few special stays, and quiet beach time at the end instead of trying to fit in too much.",
+    "bestTime": "Can work year-round with the route shaped to the season",
+    "idealLength": "8 to 12 days",
+    "goodFor": "Couples and honeymoon travel",
+    "highlights": ["Safari plus beach", "Private pace", "Special stays"],
+    "sections": [
+      {
+        "title": "Keep the route romantic, not crowded",
+        "body": "A honeymoon usually feels better with fewer moves, more private time, and strong places to stay. Couples often enjoy two or three safari areas more than trying to see everything in one trip."
+      },
+      {
+        "title": "Add a softer beach ending",
+        "body": "Zanzibar is a very natural honeymoon finish because it gives you time to slow down, enjoy each other, and end the trip with a calmer rhythm."
+      },
+      {
+        "title": "Spend on feel, not just on more nights",
+        "body": "For many honeymoon trips, the best value is not simply a longer trip. It is often better to invest in privacy, pacing, and a few memorable moments that make the journey feel special."
+      }
+    ],
+    "tips": [
+      "Choose private guiding for a smoother, more personal trip.",
+      "Limit the number of lodge changes if you want a calmer honeymoon feel.",
+      "Tell us if you want special dinners or celebration touches.",
+      "A safari plus Zanzibar mix is often one of the best honeymoon shapes."
+    ],
+    "faqs": [
+      {
+        "question": "Does a honeymoon have to be fully luxury to feel special?",
+        "answer": "No. A honeymoon can feel very special at different budget levels if the pacing, room choice, and overall flow are planned well."
+      },
+      {
+        "question": "Is Tanzania good for a shorter honeymoon?",
+        "answer": "Yes. Around eight to ten days can already make a strong honeymoon if the route is kept simple and balanced."
+      },
+      {
+        "question": "Can the honeymoon be fully private?",
+        "answer": "Yes. Private planning is usually the best fit for honeymoon travel because it gives you more control over pace and style."
+      }
+    ],
+    "relatedJourneySlug": "zanzibar-recovery-escape",
+    "ctaTitle": "Planning a honeymoon in Tanzania?",
+    "ctaText": "Tell us your dates, budget range, and whether you want more safari, more beach, or a strong mix of both."
+  },
+  {
+    "slug": "family-safari-guide",
+    "category": "Family guide",
+    "title": "Family Safari Guide",
+    "description": "Helpful planning advice for families who want a Tanzania safari with a smoother pace, private support, and easier routing.",
+    "image": "/images/serengeti.png",
+    "accent": "Best for families who want an easier rhythm",
+    "iconKey": "users",
+    "summary": "Family travel in Tanzania works well when the route is simple, the pace is calm, and the day lengths match the group. The best family trips feel exciting but never too rushed for the adults or the children.",
+    "bestTime": "Popular in dry seasons and school-holiday windows",
+    "idealLength": "6 to 9 days",
+    "goodFor": "Families who want wildlife with a smoother pace",
+    "highlights": ["Easy routing", "Kid-friendly pacing", "Private support"],
+    "sections": [
+      {
+        "title": "Choose fewer stops and shorter drives",
+        "body": "Many family trips work best when you avoid too many lodge changes and keep long road days under control. A simpler route usually means more energy and more enjoyment for everyone."
+      },
+      {
+        "title": "Private planning helps families more",
+        "body": "A private vehicle and private trip rhythm make family travel easier because you can move at your own pace, stop when needed, and shape the day around the group."
+      },
+      {
+        "title": "Mix wildlife with rest time",
+        "body": "Families often do better with a balance of exciting game drives and relaxed lodge time. The trip feels stronger when every day is not packed from start to finish."
+      }
+    ],
+    "tips": [
+      "Share the ages and interests of the children early in planning.",
+      "Choose lodges with space, comfort, and easier family flow.",
+      "Break up longer drives whenever possible.",
+      "Private trips usually make family travel much smoother."
+    ],
+    "faqs": [
+      {
+        "question": "Can younger children enjoy safari?",
+        "answer": "Yes, depending on the route and pace. Family trips usually work best when the planning matches the age and energy of the group."
+      },
+      {
+        "question": "Can we add Zanzibar after a family safari?",
+        "answer": "Yes. A beach finish can be a very good way to balance the trip for both children and adults."
+      },
+      {
+        "question": "Is a private vehicle important for families?",
+        "answer": "Usually yes. A private safari vehicle gives families more flexibility, comfort, and control over the pace of the day."
+      }
+    ],
+    "relatedJourneySlug": "classic-northern-circuit",
+    "ctaTitle": "Need help shaping a family safari?",
+    "ctaText": "Tell us the ages in your group, your dates, and how active you want the trip to feel, and we will guide you toward the right family route."
+  }
+]
