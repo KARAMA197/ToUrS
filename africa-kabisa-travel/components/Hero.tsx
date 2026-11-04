@@ -14,9 +14,16 @@ import BrandLogo from "@/components/BrandLogo";
 import TrackedLink from "@/components/TrackedLink";
 import type { HomepageContent } from "@/homepage-content-schema";
 import { usePrimaryCtaExperiment } from "@/lib/experiments";
+import { buildWhatsAppUrl } from "@/lib/contact";
 
 const highlightIcons = [ShieldCheck, Mountain, Waves];
 const journeyNoteIcons = [CalendarDays, Compass];
+const tripDirections = [
+  { label: "Safari", href: "/journeys/classic-northern-circuit" },
+  { label: "Kilimanjaro", href: "/journeys/machame-kilimanjaro-ascent" },
+  { label: "Zanzibar", href: "/journeys/zanzibar-recovery-escape" },
+  { label: "Custom route", href: "/custom-itinerary" },
+];
 
 type HeroProps = {
   content: HomepageContent["hero"];
@@ -24,12 +31,15 @@ type HeroProps = {
 
 export default function Hero({ content }: HeroProps) {
   const primaryCta = usePrimaryCtaExperiment("hero");
+  const whatsappUrl = buildWhatsAppUrl(
+    "Hello, I would like to start planning a Tanzania trip."
+  );
 
   return (
-    <section id="home" className="relative overflow-hidden bg-[#08120f] px-6 pb-28 pt-8 text-white sm:pt-12">
+    <section id="home" className="relative overflow-hidden bg-[#08120f] px-5 pb-20 pt-8 text-white sm:px-6 sm:pb-28 sm:pt-12">
       <div className="pointer-events-none absolute inset-x-0 top-0 h-[34rem] bg-[radial-gradient(circle_at_top_left,rgba(200,154,70,0.24),transparent_32%),radial-gradient(circle_at_85%_12%,rgba(255,255,255,0.08),transparent_22%)]" />
 
-      <div className="relative mx-auto grid max-w-7xl gap-14 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
+      <div className="relative mx-auto grid max-w-7xl gap-10 sm:gap-14 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
         <div>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -44,7 +54,7 @@ export default function Hero({ content }: HeroProps) {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1 }}
-            className="font-display mt-6 max-w-4xl text-5xl leading-[0.96] sm:text-6xl lg:text-7xl"
+            className="font-display mt-6 max-w-4xl text-4xl leading-[1.02] sm:text-6xl sm:leading-[0.96] lg:text-7xl"
           >
             {content.title}
           </motion.h1>
@@ -53,7 +63,7 @@ export default function Hero({ content }: HeroProps) {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
-            className="mt-6 max-w-2xl text-lg leading-8 text-white/74"
+            className="mt-5 max-w-2xl text-base leading-7 text-white/74 sm:mt-6 sm:text-lg sm:leading-8"
           >
             {content.description}
           </motion.p>
@@ -62,7 +72,7 @@ export default function Hero({ content }: HeroProps) {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.3 }}
-            className="mt-10 flex flex-col gap-4 sm:flex-row"
+            className="mt-8 flex flex-col gap-3 sm:mt-10 sm:flex-row sm:gap-4"
           >
             <TrackedLink
               href="/custom-itinerary"
@@ -86,6 +96,16 @@ export default function Hero({ content }: HeroProps) {
             >
               See trip ideas
             </TrackedLink>
+            <TrackedLink
+              href={whatsappUrl}
+              eventName="whatsapp_click"
+              eventParams={{ section: "hero", action: "quick_whatsapp" }}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center rounded-full border border-white/16 px-7 py-4 font-semibold text-white transition hover:bg-white/8"
+            >
+              WhatsApp us
+            </TrackedLink>
           </motion.div>
 
           <motion.div
@@ -108,11 +128,38 @@ export default function Hero({ content }: HeroProps) {
             ))}
           </motion.div>
 
+          <motion.nav
+            aria-label="Popular Tanzania trip starts"
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.45 }}
+            className="mt-5 flex flex-wrap items-center gap-2 rounded-[24px] border border-white/10 bg-white/[0.05] p-2 backdrop-blur"
+          >
+            <span className="px-3 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-[var(--gold-soft)]">
+              Start with
+            </span>
+            {tripDirections.map((direction) => (
+              <TrackedLink
+                key={direction.label}
+                href={direction.href}
+                eventName="cta_click"
+                eventParams={{
+                  section: "hero_trip_directions",
+                  action: "open_trip_direction",
+                  direction: direction.label,
+                }}
+                className="rounded-full border border-white/10 px-4 py-2 text-sm font-semibold text-white transition hover:border-[var(--gold-soft)] hover:text-[var(--gold-soft)]"
+              >
+                {direction.label}
+              </TrackedLink>
+            ))}
+          </motion.nav>
+
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.5 }}
-            className="mt-10 grid gap-4 sm:grid-cols-3"
+            className="mt-8 grid gap-3 sm:mt-10 sm:grid-cols-3 sm:gap-4"
           >
             {content.highlights.map((item, index) => {
               const Icon = highlightIcons[index] ?? ShieldCheck;
@@ -120,13 +167,13 @@ export default function Hero({ content }: HeroProps) {
               return (
                 <div
                   key={item.title}
-                  className="rounded-[24px] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.09),rgba(255,255,255,0.04))] p-5 backdrop-blur"
+                  className="rounded-[22px] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.09),rgba(255,255,255,0.04))] p-4 backdrop-blur sm:rounded-[24px] sm:p-5"
                 >
                   <div className="mb-4 inline-flex rounded-full bg-[var(--gold)]/18 p-3 text-[var(--gold-soft)]">
                     <Icon size={18} />
                   </div>
                   <h2 className="text-lg font-semibold text-white">{item.title}</h2>
-                  <p className="mt-2 text-sm leading-7 text-white/72">{item.description}</p>
+                  <p className="mt-2 text-sm leading-6 text-white/72 sm:leading-7">{item.description}</p>
                 </div>
               );
             })}
@@ -141,7 +188,7 @@ export default function Hero({ content }: HeroProps) {
         >
           <div className="absolute -inset-6 rounded-[40px] bg-[radial-gradient(circle,rgba(200,154,70,0.18),transparent_60%)] blur-3xl" />
           <div className="relative overflow-hidden rounded-[32px] border border-white/10 bg-[#10251f] shadow-[0_35px_120px_-40px_rgba(8,18,15,0.85)]">
-            <div className="relative h-[560px]">
+            <div className="relative h-[460px] sm:h-[560px]">
               <Image
                 src="/images/tour-gallery/safari-dust-road.jpeg"
                 alt="Safari vehicles crossing a Tanzania landscape at golden hour"
@@ -153,24 +200,24 @@ export default function Hero({ content }: HeroProps) {
               <div className="absolute inset-0 bg-gradient-to-b from-[#08120f]/12 via-[#08120f]/38 to-[#08120f]" />
             </div>
 
-            <div className="absolute inset-x-0 top-0 p-6 sm:p-8">
-              <div className="max-w-sm rounded-[28px] border border-white/14 bg-[linear-gradient(180deg,rgba(0,0,0,0.3),rgba(0,0,0,0.24))] p-5 shadow-[0_26px_70px_-40px_rgba(8,18,15,0.75)] backdrop-blur-md">
-                <div className="mb-4 inline-flex rounded-[22px] border border-white/12 bg-white/8 px-3 py-2">
+            <div className="absolute inset-x-0 top-0 p-4 sm:p-8">
+              <div className="max-w-sm rounded-[24px] border border-white/14 bg-[linear-gradient(180deg,rgba(0,0,0,0.3),rgba(0,0,0,0.24))] p-4 shadow-[0_26px_70px_-40px_rgba(8,18,15,0.75)] backdrop-blur-md sm:rounded-[28px] sm:p-5">
+                <div className="mb-3 inline-flex rounded-[22px] border border-white/12 bg-white/8 px-3 py-2 sm:mb-4">
                   <BrandLogo tone="light" size="sm" />
                 </div>
                 <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[var(--gold-soft)]">
                   {content.featuredJourneyEyebrow}
                 </p>
-                <h2 className="font-display mt-3 text-3xl leading-[1.02]">
+                <h2 className="font-display mt-3 text-2xl leading-[1.04] sm:text-3xl sm:leading-[1.02]">
                   {content.featuredJourneyTitle}
                 </h2>
-                <p className="mt-3 text-sm leading-7 text-white/72">
+                <p className="mt-3 text-sm leading-6 text-white/72 sm:leading-7">
                   {content.featuredJourneyDescription}
                 </p>
               </div>
             </div>
 
-            <div className="absolute inset-x-0 bottom-0 p-6 sm:p-8">
+            <div className="absolute inset-x-0 bottom-0 p-4 sm:p-8">
               <div className="grid gap-3 sm:grid-cols-2">
                 {content.journeyNotes.map((item, index) => {
                   const Icon = journeyNoteIcons[index] ?? Compass;
@@ -178,13 +225,13 @@ export default function Hero({ content }: HeroProps) {
                   return (
                     <div
                       key={item.title}
-                      className="rounded-[24px] border border-white/12 bg-[linear-gradient(180deg,rgba(0,0,0,0.28),rgba(0,0,0,0.2))] p-5 backdrop-blur-md"
+                      className="rounded-[22px] border border-white/12 bg-[linear-gradient(180deg,rgba(0,0,0,0.28),rgba(0,0,0,0.2))] p-4 backdrop-blur-md sm:rounded-[24px] sm:p-5"
                     >
                       <div className="mb-3 inline-flex rounded-full bg-white/10 p-3 text-white">
                         <Icon size={18} />
                       </div>
                       <h3 className="text-base font-semibold">{item.title}</h3>
-                      <p className="mt-2 text-sm leading-7 text-white/72">{item.description}</p>
+                      <p className="mt-2 text-sm leading-6 text-white/72 sm:leading-7">{item.description}</p>
                     </div>
                   );
                 })}

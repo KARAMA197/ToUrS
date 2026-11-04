@@ -11,8 +11,8 @@ export default function HomeAboutSection() {
   const [leadParagraph, ...supportingParagraphs] = aboutContent.companyIntro;
 
   return (
-    <section id="about-home" className="px-6 py-16 scroll-mt-24 lg:py-20">
-      <div className="relative isolate mx-auto max-w-7xl overflow-hidden rounded-[36px] border border-[var(--border)] bg-[linear-gradient(180deg,rgba(255,250,243,0.98),rgba(247,240,227,0.94))] p-8 shadow-[0_28px_80px_-52px_rgba(8,18,15,0.45)] backdrop-blur lg:p-10">
+    <section id="about-home" className="scroll-mt-24 px-5 py-12 sm:px-6 sm:py-16 lg:py-20">
+      <div className="relative isolate mx-auto max-w-7xl overflow-hidden rounded-[28px] border border-[var(--border)] bg-[linear-gradient(180deg,rgba(255,250,243,0.98),rgba(247,240,227,0.94))] p-5 shadow-[0_28px_80px_-52px_rgba(8,18,15,0.45)] backdrop-blur sm:rounded-[36px] sm:p-8 lg:p-10">
         <div
           aria-hidden="true"
           className="pointer-events-none absolute inset-0 -z-10 overflow-hidden"
@@ -26,33 +26,35 @@ export default function HomeAboutSection() {
           <div className="absolute inset-y-0 right-0 w-[36%] bg-[linear-gradient(270deg,rgba(16,37,28,0.03),transparent)]" />
         </div>
 
-        <div className="relative z-10 grid gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
+        <div className="relative z-10 grid gap-6 sm:gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[var(--gold)]">
               {aboutContent.eyebrow}
             </p>
-            <h2 className="font-display mt-4 max-w-3xl text-4xl text-[var(--forest)] sm:text-5xl">
+            <h2 className="font-display mt-4 max-w-3xl text-3xl text-[var(--forest)] sm:text-5xl">
               {aboutContent.title}
             </h2>
 
-            <p className="mt-5 max-w-3xl text-lg leading-9 text-[color:rgba(19,32,24,0.78)] sm:text-xl">
+            <p className="mt-4 max-w-3xl text-base leading-7 text-[color:rgba(19,32,24,0.78)] sm:mt-5 sm:text-xl sm:leading-9">
               {leadParagraph}
             </p>
 
-            <div className="mt-6 max-w-2xl rounded-[26px] border border-[rgba(16,37,28,0.1)] bg-white/72 p-5 shadow-[0_20px_45px_-36px_rgba(8,18,15,0.32)]">
+            <div className="mt-5 max-w-2xl rounded-[22px] border border-[rgba(16,37,28,0.1)] bg-white/72 p-4 shadow-[0_20px_45px_-36px_rgba(8,18,15,0.32)] sm:mt-6 sm:rounded-[26px] sm:p-5">
               <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--gold)]">
                 Our planning lens
               </p>
-              <p className="mt-3 text-base leading-8 text-[color:rgba(19,32,24,0.72)]">
+              <p className="mt-3 text-sm leading-7 text-[color:rgba(19,32,24,0.72)] sm:text-base sm:leading-8">
                 {aboutContent.introNote}
               </p>
             </div>
 
             <div className="mt-6 space-y-4">
-              {supportingParagraphs.map((paragraph) => (
+              {supportingParagraphs.map((paragraph, index) => (
                 <p
                   key={paragraph}
-                  className="max-w-3xl text-base leading-8 text-[color:rgba(19,32,24,0.68)]"
+                  className={`max-w-3xl text-sm leading-7 text-[color:rgba(19,32,24,0.68)] sm:text-base sm:leading-8 ${
+                    index > 0 ? "hidden sm:block" : ""
+                  }`}
                 >
                   {paragraph}
                 </p>
@@ -70,7 +72,7 @@ export default function HomeAboutSection() {
               ))}
             </div>
 
-            <div className="mt-8 flex flex-wrap gap-4">
+            <div className="mt-6 flex flex-wrap gap-3 sm:mt-8 sm:gap-4">
               <Link
                 href="/about"
                 className="inline-flex items-center gap-3 rounded-full bg-[var(--forest)] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[var(--gold)] hover:text-[var(--forest)]"
@@ -87,9 +89,9 @@ export default function HomeAboutSection() {
             </div>
           </div>
 
-          <div className="space-y-5">
+          <div className="space-y-4 sm:space-y-5">
             <article className="overflow-hidden rounded-[30px] border border-[rgba(16,37,28,0.12)] bg-white shadow-[0_30px_80px_-46px_rgba(8,18,15,0.28)]">
-              <div className="relative h-72">
+              <div className="relative h-64 sm:h-72">
                 <Image
                   src="/images/about-story-kilimanjaro.jpeg"
                   alt="Mount Kilimanjaro above the clouds"
@@ -106,21 +108,21 @@ export default function HomeAboutSection() {
                     Private Tanzania planning
                   </div>
                 </div>
-                <div className="absolute inset-x-0 bottom-0 p-6 text-white">
+                <div className="absolute inset-x-0 bottom-0 p-5 text-white sm:p-6">
                   <p className="text-xs font-semibold uppercase tracking-[0.22em] text-white/72">
                     Kilimanjaro, safari, and coast
                   </p>
-                  <h3 className="font-display mt-3 text-3xl leading-none sm:text-[2.1rem]">
+                  <h3 className="font-display mt-3 text-2xl leading-none sm:text-[2.1rem]">
                     Tanzania journeys shaped with calm planning and a clear sense of flow.
                   </h3>
-                  <p className="mt-3 max-w-md text-sm leading-7 text-white/74">
+                  <p className="mt-3 max-w-md text-sm leading-6 text-white/74 sm:leading-7">
                     From mountain horizons to safari and beach time, we help travelers shape one
                     balanced journey instead of disconnected plans.
                   </p>
                 </div>
               </div>
 
-              <div className="bg-[var(--forest)] p-6 text-white">
+              <div className="bg-[var(--forest)] p-5 text-white sm:p-6">
                 <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[var(--gold-soft)]">
                   {aboutContent.promiseTitle}
                 </p>
@@ -129,27 +131,27 @@ export default function HomeAboutSection() {
                   {aboutContent.promiseItems.map((item) => (
                     <div key={item} className="flex gap-3">
                       <span className="mt-2 h-2.5 w-2.5 shrink-0 rounded-full bg-[var(--gold-soft)]" />
-                      <p className="text-sm leading-7 text-white/82">{item}</p>
+                      <p className="text-sm leading-6 text-white/82 sm:leading-7">{item}</p>
                     </div>
                   ))}
                 </div>
               </div>
             </article>
 
-            <div className="grid gap-4 sm:grid-cols-3 lg:grid-cols-1 xl:grid-cols-3">
+            <div className="grid grid-cols-3 gap-3 sm:gap-4 lg:grid-cols-1 xl:grid-cols-3">
               {aboutContent.startupStrengths.map((item, index) => {
                 const Icon = strengthIcons[index] ?? Compass;
 
                 return (
                   <article
                     key={item.title}
-                    className="rounded-[24px] border border-[var(--border)] bg-white p-5 shadow-[0_18px_50px_-42px_rgba(8,18,15,0.32)]"
+                    className="rounded-[18px] border border-[var(--border)] bg-white p-3 shadow-[0_18px_50px_-42px_rgba(8,18,15,0.32)] sm:rounded-[24px] sm:p-5"
                   >
-                    <div className="mb-4 inline-flex rounded-full bg-[var(--sand)] p-3 text-[var(--forest)]">
+                    <div className="mb-3 inline-flex rounded-full bg-[var(--sand)] p-2 text-[var(--forest)] sm:mb-4 sm:p-3">
                       <Icon size={18} />
                     </div>
-                    <h3 className="text-lg font-semibold text-[var(--forest)]">{item.title}</h3>
-                    <p className="mt-3 text-sm leading-7 text-[color:rgba(19,32,24,0.72)]">
+                    <h3 className="text-sm font-semibold leading-5 text-[var(--forest)] sm:text-lg">{item.title}</h3>
+                    <p className="mt-3 hidden text-sm leading-7 text-[color:rgba(19,32,24,0.72)] sm:block">
                       {item.description}
                     </p>
                   </article>

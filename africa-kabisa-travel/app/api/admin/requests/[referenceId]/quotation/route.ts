@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
+import { requireEmailAccepted } from "@/lib/email-delivery";
 import { isAdminRequestAuthenticated } from "@/lib/admin-auth";
 import {
   buildQuotationEmailHtml,
@@ -17,7 +18,8 @@ import { siteConfig } from "@/lib/site";
 
 const resendApiKey = process.env.RESEND_API_KEY;
 const fromEmail = process.env.RESEND_FROM_EMAIL ?? "onboarding@resend.dev";
-const businessEmail = process.env.CONTACT_EMAIL ?? "mrkarama2@gmail.com";
+const businessEmail =
+  process.env.CONTACT_EMAIL ?? process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "";
 
 type AdminRequestQuotationRouteProps = {
   params: Promise<{ referenceId: string }>;
@@ -214,6 +216,13 @@ export async function POST(
     );
   }
 
+  if (!businessEmail) {
+    return NextResponse.json(
+      { error: "Business reply email is not configured yet." },
+      { status: 500 }
+    );
+  }
+
   const resend = new Resend(resendApiKey);
   const now = new Date().toISOString();
   const source = buildQuotationSource(referenceId, requestRecord);
@@ -233,25 +242,47 @@ export async function POST(
     sentAt: now,
   });
 
-  await resend.emails.send({
-    from: `${siteConfig.name} <${fromEmail}>`,
-    to: requestRecord.email,
-    replyTo: businessEmail,
-    subject: quotation.subject,
-    html: buildQuotationEmailHtml(source, quotation),
-    text: buildQuotationEmailText(source, quotation),
-  });
-
-  const updatedRequest = await updateReceivedRequest(referenceId, {
-    leadStatus: isTerminalLeadStatus(requestRecord.leadStatus)
-      ? requestRecord.leadStatus
-      : "Quotation sent",
-    quotation,
-  });
-
-  if (!updatedRequest) {
-    return NextResponse.json({ error: "Request not found." }, { status: 404 });
+  let emailId: string;
+  try {
+    const result = await resend.emails.send({
+      from: `${siteConfig.name} <${fromEmail}>`,
+      to: requestRecord.email,
+      replyTo: businessEmail,
+      subject: quotation.subject,
+      html: buildQuotationEmailHtml(source, quotation),
+      text: buildQuotationEmailText(source, quotation),
+    });
+    emailId = requireEmailAccepted(result);
+  } catch (error) {
+    console.error("Quotation email submission was not confirmed", error);
+    return NextResponse.json(
+      { error: "The email service did not confirm acceptance. The quotation status has not changed. Check the email service before retrying." },
+      { status: 502 }
+    );
   }
 
-  return NextResponse.json({ request: updatedRequest, sent: true });
+  try {
+    const updatedRequest = await updateReceivedRequest(referenceId, {
+      leadStatus: isTerminalLeadStatus(requestRecord.leadStatus)
+        ? requestRecord.leadStatus
+        : "Quotation sent",
+      quotation,
+    });
+
+    if (!updatedRequest) {
+      throw new Error("Request was no longer available when saving quotation status.");
+    }
+
+    return NextResponse.json({ request: updatedRequest, sent: true, emailAccepted: true, emailId });
+  } catch (error) {
+    console.error("Quotation email accepted but status could not be saved", error);
+    return NextResponse.json(
+      {
+        emailAccepted: true,
+        emailId,
+        error: "The email service accepted this quotation, but its status could not be saved. Do not resend it; check the email service and resolve the inbox storage issue first.",
+      },
+      { status: 503 }
+    );
+  }
 }

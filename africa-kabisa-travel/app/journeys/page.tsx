@@ -7,6 +7,7 @@ import {
   isJourneyRecommendedForStay,
 } from "@/accommodations-data";
 import BrandLogo from "@/components/BrandLogo";
+import PricingGuidanceSection from "@/components/PricingGuidanceSection";
 import {
   buildTripPlanHref,
   parseRouteIndex,
@@ -14,6 +15,10 @@ import {
 } from "@/lib/trip-plan";
 import { journeys } from "@/journeys-data";
 import { siteConfig } from "@/lib/site";
+import {
+  buildTravelMomentExtras,
+  parseTravelMomentSlugsParam,
+} from "@/lib/travel-moments";
 
 const iconMap = {
   compass: Compass,
@@ -22,16 +27,16 @@ const iconMap = {
 };
 
 export const metadata: Metadata = {
-  title: `Sample Tanzania Journeys | ${siteConfig.name}`,
+  title: "Tanzania Safari Packages and Private Journey Ideas",
   description:
-    "Explore sample Tanzania journeys for safari, Kilimanjaro, and Zanzibar trips, then shape the route around your dates, budget, and travel style.",
+    "Compare private Tanzania safari packages, Kilimanjaro climbs, Zanzibar holidays, and combined route ideas before shaping a custom trip around your dates and budget.",
   alternates: {
     canonical: "/journeys",
   },
   openGraph: {
-    title: `Sample Tanzania Journeys | ${siteConfig.name}`,
+    title: `Tanzania Safari Packages and Private Journeys | ${siteConfig.name}`,
     description:
-      "Explore sample Tanzania journeys for safari, Kilimanjaro, and Zanzibar trips and build the right route for your travel style.",
+      "Compare sample Tanzania safari, Kilimanjaro, Zanzibar, and combined route ideas before planning a private trip.",
     url: "/journeys",
     images: [
       {
@@ -50,6 +55,8 @@ type JourneysPageProps = {
     routeIndex?: string | string[];
     stay?: string | string[];
     browse?: string | string[];
+    moment?: string | string[];
+    moments?: string | string[];
   }>;
 };
 
@@ -66,6 +73,11 @@ export default async function JourneysPage({
     getSearchParamValue(resolvedSearchParams.routeIndex)
   );
   const browse = getSearchParamValue(resolvedSearchParams.browse);
+  const selectedMomentSlugs = parseTravelMomentSlugsParam(
+    getSearchParamValue(resolvedSearchParams.moments),
+    getSearchParamValue(resolvedSearchParams.moment)
+  );
+  const momentExtras = buildTravelMomentExtras(selectedMomentSlugs);
   const selectedStay = getAccommodationBySlug(
     getSearchParamValue(resolvedSearchParams.stay)
   );
@@ -119,10 +131,18 @@ export default async function JourneysPage({
     new Set(journeys.map((journey) => journey.subtitle))
   );
   const browseAllJourneysHref = hasPlanContext
-    ? buildTripPlanHref("/journeys", plan, { routeIndex, browse: "all" })
+    ? buildTripPlanHref("/journeys", plan, {
+        routeIndex,
+        browse: "all",
+        ...momentExtras,
+      })
     : selectedStay
-      ? `/journeys?stay=${selectedStay.slug}&browse=all`
-      : "/journeys";
+      ? buildTripPlanHref("/journeys", [], {
+          stay: selectedStay.slug,
+          browse: "all",
+          ...momentExtras,
+        })
+      : buildTripPlanHref("/journeys", [], momentExtras);
 
   const pageTitle = editingRoute
     ? "Preview route ideas for this part of your trip."
@@ -147,10 +167,17 @@ export default async function JourneysPage({
     const routeHref = hasPlanContext
       ? buildTripPlanHref(`/journeys/${journey.slug}`, plan, {
           routeIndex,
+          ...momentExtras,
         })
       : selectedStay
-        ? `/journeys/${journey.slug}?stay=${selectedStay.slug}`
-        : `/journeys/${journey.slug}`;
+        ? buildTripPlanHref(`/journeys/${journey.slug}`, [], {
+            stay: selectedStay.slug,
+            ...momentExtras,
+          })
+        : buildTripPlanHref(`/journeys/${journey.slug}`, [], momentExtras);
+    const planHref = buildTripPlanHref("/custom-itinerary", [
+      { journeySlug: journey.slug, staySlugs: [] },
+    ], momentExtras);
 
     return (
       <article
@@ -219,13 +246,23 @@ export default async function JourneysPage({
             ))}
           </div>
 
-          <Link
-            href={routeHref}
-            className="mt-8 inline-flex items-center gap-3 font-semibold text-[var(--forest)] transition hover:text-[var(--gold)]"
-          >
-            {hasPlanContext || selectedStay ? "View route and add it" : "View full journey"}
-            <ArrowRight size={16} />
-          </Link>
+          <div className="mt-8 flex flex-wrap gap-3">
+            <Link
+              href={routeHref}
+              className="inline-flex items-center gap-3 font-semibold text-[var(--forest)] transition hover:text-[var(--gold)]"
+            >
+              {hasPlanContext || selectedStay ? "View route and add it" : "View full journey"}
+              <ArrowRight size={16} />
+            </Link>
+            {!hasPlanContext && !selectedStay && (
+              <Link
+                href={planHref}
+                className="inline-flex items-center justify-center rounded-full bg-[var(--forest)] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[var(--forest-soft)]"
+              >
+                Start with this route
+              </Link>
+            )}
+          </div>
         </div>
       </article>
     );
@@ -237,7 +274,7 @@ export default async function JourneysPage({
         <div className="grid gap-10 lg:grid-cols-[0.92fr_1.08fr] lg:items-center">
           <div className="max-w-3xl">
             <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[var(--gold)]">
-              Journeys
+              Tanzania journey ideas
             </p>
             <h1 className="font-display mt-3 text-4xl text-[var(--forest)] sm:text-5xl">
               {pageTitle}
@@ -426,6 +463,29 @@ export default async function JourneysPage({
             {(usingFallbackJourneys ? journeys : recommendedJourneys).map(renderJourneyCard)}
           </div>
         )}
+
+        {!hasPlanContext && !selectedStay ? <PricingGuidanceSection compact /> : null}
+
+        <div className="mt-10 rounded-[30px] border border-[var(--border)] bg-[rgba(255,250,243,0.88)] p-6 shadow-[0_24px_70px_-48px_rgba(8,18,15,0.32)]">
+          <div className="flex flex-col gap-5 lg:flex-row lg:items-center lg:justify-between">
+            <div className="max-w-2xl">
+              <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[var(--gold)]">
+                Need a custom Tanzania route?
+              </p>
+              <p className="mt-3 text-sm leading-7 text-[color:rgba(19,32,24,0.72)]">
+                Tell us your dates, group size, budget range, and the route style you like. We will
+                shape a private safari, Kilimanjaro, Zanzibar, or combined itinerary around you.
+              </p>
+            </div>
+            <Link
+              href={buildTripPlanHref("/custom-itinerary", [], momentExtras)}
+              className="inline-flex items-center justify-center gap-3 rounded-full bg-[var(--forest)] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[var(--forest-soft)]"
+            >
+              Ask for a custom route
+              <ArrowRight size={16} />
+            </Link>
+          </div>
+        </div>
       </section>
     </main>
   );

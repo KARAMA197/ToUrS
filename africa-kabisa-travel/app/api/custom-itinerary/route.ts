@@ -1,5 +1,6 @@
 ﻿import { NextResponse } from "next/server";
 import { Resend } from "resend";
+import { requireEmailAccepted } from "@/lib/email-delivery";
 import { buildWhatsAppChatUrl, buildWhatsAppUrl } from "@/lib/contact";
 import {
   buildLeadReference,
@@ -18,7 +19,8 @@ import {
 } from "@/lib/trip-styles";
 
 const resendApiKey = process.env.RESEND_API_KEY;
-const businessEmail = process.env.CONTACT_EMAIL ?? "mrkarama2@gmail.com";
+const businessEmail =
+  process.env.CONTACT_EMAIL ?? process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "";
 const fromEmail = process.env.RESEND_FROM_EMAIL ?? "onboarding@resend.dev";
 
 const allowedContactPreferences = new Set<ContactPreference>([
@@ -54,6 +56,12 @@ type ItineraryRequest = {
   stay?: string;
   staySlug?: string;
   stayCategory?: string;
+  destinationTitle?: string;
+  destinationSlug?: string;
+  destinationRegion?: string;
+  travelMomentTitle?: string;
+  travelMomentSlug?: string;
+  travelMomentLocation?: string;
   contactPreference?: ContactPreference;
   leadSource?: string;
   tripPlan?: TripPlanRouteRequest[];
@@ -66,6 +74,8 @@ function isValidEmail(email: string) {
 export async function POST(req: Request) {
   let requestRecord: ReceivedRequest | null = null;
   let requestSaved = false;
+  let businessEmailAccepted = false;
+  let emailSubmissionComplete = false;
 
   try {
     const body = (await req.json()) as ItineraryRequest;
@@ -83,6 +93,12 @@ export async function POST(req: Request) {
     const stay = body.stay?.trim() ?? "";
     const staySlug = body.staySlug?.trim() ?? "";
     const stayCategory = body.stayCategory?.trim() ?? "";
+    const destinationTitle = body.destinationTitle?.trim() ?? "";
+    const destinationSlug = body.destinationSlug?.trim() ?? "";
+    const destinationRegion = body.destinationRegion?.trim() ?? "";
+    const travelMomentTitle = body.travelMomentTitle?.trim() ?? "";
+    const travelMomentSlug = body.travelMomentSlug?.trim() ?? "";
+    const travelMomentLocation = body.travelMomentLocation?.trim() ?? "";
     const contactPreference = body.contactPreference?.trim() as ContactPreference | undefined;
     const leadSource = body.leadSource?.trim();
     const tripPlan = Array.isArray(body.tripPlan)
@@ -167,6 +183,8 @@ export async function POST(req: Request) {
     );
     const hasStructuredTripPlan = routeCount > 0;
     const hasJourneyAndStay = Boolean(journey && stay);
+    const hasDestination = Boolean(destinationTitle);
+    const hasTravelMoment = Boolean(travelMomentTitle);
     const leadType = hasStructuredTripPlan
       ? routeCount > 1 || stayCount > 1
         ? "Trip plan inquiry"
@@ -175,13 +193,17 @@ export async function POST(req: Request) {
           : "Journey inquiry"
       : hasJourneyAndStay
         ? "Journey and accommodation inquiry"
-        : journey
-          ? "Journey inquiry"
-          : stay
-            ? "Accommodation inquiry"
-            : tripStyleLabel
-              ? "Travel style inquiry"
-            : "Custom trip inquiry";
+          : journey
+            ? "Journey inquiry"
+            : stay
+              ? "Accommodation inquiry"
+              : hasDestination
+                ? "Destination inquiry"
+                : hasTravelMoment
+                  ? "Travel moment inquiry"
+                  : tripStyleLabel
+                    ? "Travel style inquiry"
+                    : "Custom trip inquiry";
     const leadSourceLabel =
       leadSource === "trip_plan_builder"
         ? "Trip plan builder"
@@ -191,7 +213,11 @@ export async function POST(req: Request) {
             ? "Journey detail page"
             : leadSource === "accommodation_page"
               ? "Accommodation page"
-              : "Custom itinerary page";
+              : leadSource === "travel_moment_slideshow"
+                ? "Travel moment slideshow"
+                : leadSource === "destination_page"
+                  ? "Destination page"
+                  : "Custom itinerary page";
     const followUpChannel = getFollowUpChannel(contactPreference, phone);
     const selectedRequest = hasStructuredTripPlan
       ? routeCount === 1 && stayCount === 1
@@ -201,7 +227,12 @@ export async function POST(req: Request) {
           : `${routeCount} routes / ${stayCount} stays`
       : hasJourneyAndStay
         ? `${journey} + ${stay}`
-        : journey || stay || tripStyleLabel || "Custom Tanzania trip";
+        : journey ||
+          stay ||
+          destinationTitle ||
+          travelMomentTitle ||
+          tripStyleLabel ||
+          "Custom Tanzania trip";
     const whatsappLink = buildWhatsAppUrl(
       "Hello, I just sent a trip request and would like a faster follow-up."
     );
@@ -216,15 +247,23 @@ export async function POST(req: Request) {
       ? "We got your Tanzania trip plan"
       : hasJourneyAndStay
         ? `We got your ${journey} and ${stay} request`
-        : journey
-          ? `We got your ${journey} request`
-          : stay
-            ? `We got your ${stay} stay request`
-            : "We got your trip request";
+      : journey
+        ? `We got your ${journey} request`
+        : stay
+          ? `We got your ${stay} stay request`
+          : hasDestination
+            ? `We got your ${destinationTitle} trip idea`
+          : hasTravelMoment
+            ? `We got your ${travelMomentTitle} trip idea`
+          : "We got your trip request";
     const travelerStepTwo = hasStructuredTripPlan || hasJourneyAndStay
       ? "2. We send a clear first route and stay plan."
       : stay
         ? "2. We send a clear stay and route suggestion."
+        : hasDestination
+          ? "2. We suggest the route, timing, and nearby places that fit this destination."
+        : hasTravelMoment
+          ? "2. We suggest the route, timing, and places that can create that kind of moment."
         : "2. We send a clear first route idea.";
     const tripPlanSummary = hasStructuredTripPlan
       ? `${routeCount} route${routeCount === 1 ? "" : "s"} / ${stayCount} stay${stayCount === 1 ? "" : "s"}`
@@ -295,6 +334,12 @@ export async function POST(req: Request) {
       ["Budget", budget],
       ["Travel date", travelDate],
       ["Lead source", leadSourceLabel],
+      ["Destination", destinationTitle || "Not provided"],
+      ["Destination region", destinationRegion || "Not provided"],
+      ["Destination slug", destinationSlug || "Not provided"],
+      ["Travel moment", travelMomentTitle || "Not provided"],
+      ["Travel moment location", travelMomentLocation || "Not provided"],
+      ["Travel moment slug", travelMomentSlug || "Not provided"],
       ["Journey slug", journeySlug || "Not provided"],
       ["Stay category", stayCategory || "Not provided"],
       ["Stay slug", staySlug || "Not provided"],
@@ -330,6 +375,12 @@ export async function POST(req: Request) {
       `Budget: ${budget}`,
       `Travel date: ${travelDate}`,
       `Lead source: ${leadSourceLabel}`,
+      `Destination: ${destinationTitle || "Not provided"}`,
+      `Destination region: ${destinationRegion || "Not provided"}`,
+      `Destination slug: ${destinationSlug || "Not provided"}`,
+      `Travel moment: ${travelMomentTitle || "Not provided"}`,
+      `Travel moment location: ${travelMomentLocation || "Not provided"}`,
+      `Travel moment slug: ${travelMomentSlug || "Not provided"}`,
       `Journey slug: ${journeySlug || "Not provided"}`,
       `Stay category: ${stayCategory || "Not provided"}`,
       `Stay slug: ${staySlug || "Not provided"}`,
@@ -410,13 +461,19 @@ export async function POST(req: Request) {
       stay,
       staySlug,
       stayCategory,
+      destinationTitle,
+      destinationSlug,
+      destinationRegion,
+      travelMomentTitle,
+      travelMomentSlug,
+      travelMomentLocation,
       contactPreference,
       followUpChannel,
       leadSource: leadSource ?? "custom_itinerary_page",
       leadSourceLabel,
       customerWhatsappFollowUpLink,
       deliveryStatus: shouldSendTravelerEmail
-        ? "Delivered"
+        ? "Email accepted"
         : "Awaiting WhatsApp follow-up",
       leadStatus: "New",
       adminNote: "",
@@ -442,7 +499,11 @@ export async function POST(req: Request) {
       throw new Error("Missing RESEND_API_KEY");
     }
 
-    await resend.emails.send({
+    if (!businessEmail) {
+      throw new Error("Missing CONTACT_EMAIL");
+    }
+
+    const businessEmailResult = await resend.emails.send({
       from: `${siteConfig.name} <${fromEmail}>`,
       to: businessEmail,
       replyTo: email,
@@ -481,11 +542,14 @@ export async function POST(req: Request) {
       `,
       text: businessText,
     });
+    requireEmailAccepted(businessEmailResult);
+    businessEmailAccepted = true;
 
     if (shouldSendTravelerEmail) {
-      await resend.emails.send({
+      const travelerEmailResult = await resend.emails.send({
         from: `${siteConfig.name} <${fromEmail}>`,
         to: email,
+        replyTo: businessEmail,
         subject: travelerSubject,
         html: `
           <div style="font-family:Arial,sans-serif;max-width:720px;margin:0 auto;padding:24px;background:#f8f4ec;color:#10251c;">
@@ -524,14 +588,16 @@ export async function POST(req: Request) {
         `,
         text: travelerText,
       });
+      requireEmailAccepted(travelerEmailResult);
     }
+    emailSubmissionComplete = true;
 
     if (requestRecord) {
       await saveReceivedRequest(requestRecord);
       requestSaved = true;
     }
 
-    return NextResponse.json({ success: true });
+    return NextResponse.json({ success: true, referenceId });
   } catch (error) {
     console.error(error);
 
@@ -539,14 +605,40 @@ export async function POST(req: Request) {
       try {
         await saveReceivedRequest({
           ...requestRecord,
-          deliveryStatus: "Needs attention",
-          deliveryError:
-            error instanceof Error ? error.message : "Unknown delivery error",
+          deliveryStatus: emailSubmissionComplete
+            ? requestRecord.deliveryStatus
+            : "Needs attention",
+          deliveryError: emailSubmissionComplete
+            ? undefined
+            : error instanceof Error ? error.message : "Unknown delivery error",
         });
         requestSaved = true;
       } catch (saveError) {
         console.error(saveError);
       }
+    }
+
+    if (requestRecord && requestSaved) {
+      return NextResponse.json({
+        success: true,
+        referenceId: requestRecord.referenceId,
+        ...(emailSubmissionComplete ? {} : {
+          deliveryWarning:
+            "Your request was saved, but we could not confirm email submission. Please use WhatsApp below for follow-up; you do not need to submit the form again.",
+        }),
+      });
+    }
+
+    if (requestRecord && businessEmailAccepted) {
+      return NextResponse.json(
+        {
+          success: false,
+          emailAccepted: true,
+          referenceId: requestRecord.referenceId,
+          error: `Your request was accepted by our email service, but we could not save it to our request inbox. Please contact us on WhatsApp with reference ${requestRecord.referenceId} before submitting again.`,
+        },
+        { status: 503 }
+      );
     }
 
     return NextResponse.json(

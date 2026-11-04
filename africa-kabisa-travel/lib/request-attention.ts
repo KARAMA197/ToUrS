@@ -4,9 +4,7 @@ import {
 } from "@/lib/request-pipeline";
 
 export type AttentionDeliveryStatus =
-  | "Delivered"
-  | "Awaiting WhatsApp follow-up"
-  | "Needs attention";
+  import("@/lib/request-inbox").ReceivedRequestDeliveryStatus;
 
 export type AttentionLeadStatus = ReceivedRequestLeadStatus;
 

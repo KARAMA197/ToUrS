@@ -19,7 +19,7 @@ const travelerProofContent = brandPagesContent.travelerProof;
 const sourceIcons = [Globe2, Quote, MessageCircle, Repeat2];
 
 export const metadata: Metadata = {
-  title: `Traveler Proof and Review Standards | ${siteConfig.name}`,
+  title: "Traveler Proof and Review Standards",
   description:
     `See how ${siteConfig.name} approaches real traveler proof, public review signals, and honest trust-building as the business grows.`,
   alternates: {

@@ -30,19 +30,19 @@ export async function generateMetadata({
 
   if (!destination) {
     return {
-      title: `Destination not found | ${siteConfig.name}`,
+      title: "Destination not found",
     };
   }
 
   return {
-    title: `${destination.title} | ${siteConfig.name}`,
-    description: destination.description,
+    title: `${destination.title} Tanzania Trip Planning`,
+    description: `${destination.summary} Plan a private Tanzania route around ${destination.title} with timing, stay, and route-flow guidance.`,
     alternates: {
       canonical: `/destinations/${destination.slug}`,
     },
     openGraph: {
-      title: `${destination.title} | ${siteConfig.name}`,
-      description: destination.description,
+      title: `${destination.title} Tanzania Trip Planning | ${siteConfig.name}`,
+      description: `${destination.summary} Plan a private Tanzania route around this destination with local route guidance.`,
       url: `/destinations/${destination.slug}`,
       images: [
         {
@@ -156,7 +156,7 @@ export default async function DestinationDetailPage({
 
               <div className="mt-10 flex flex-wrap gap-4">
                 <Link
-                  href="/custom-itinerary"
+                  href={`/custom-itinerary?destination=${destination.slug}`}
                   className="inline-flex items-center gap-3 rounded-full bg-[var(--forest)] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[var(--gold)] hover:text-[var(--forest)]"
                 >
                   Plan a trip around {destination.title}
@@ -293,4 +293,3 @@ export default async function DestinationDetailPage({
     </main>
   );
 }
-

@@ -1,0 +1,8 @@
+# Local development output
+/dev-server.*.log
+/tmp-test.txt
+/travel-moments-contact-sheet.jpg
+
+# Standalone Sites checkout and deployment bundle
+/sites/brilliant-explore/
+/sites/brilliant-explore-deploy.tar.gz

@@ -5,10 +5,10 @@ import Destinations from "@/components/Destinations";
 import Hero from "@/components/Hero";
 import HomeAboutSection from "@/components/HomeAboutSection";
 import PlanningGuide from "@/components/PlanningGuide";
-import ProofSection from "@/components/ProofSection";
-import PublicProfilesShowcase from "@/components/PublicProfilesShowcase";
+import PricingGuidanceSection from "@/components/PricingGuidanceSection";
+import TravelMomentsSection from "@/components/TravelMomentsSection";
 import TravelStylesSection from "@/components/TravelStylesSection";
-import WhyChoose from "@/components/WhyChooseUs";
+import TrustEvidenceSection from "@/components/TrustEvidenceSection";
 import { readHomepageContent } from "@/homepage-content";
 import { siteConfig } from "@/lib/site";
 
@@ -18,16 +18,16 @@ const StatsSection = dynamicImport(() => import("@/components/StatsSection"));
 const Testimonials = dynamicImport(() => import("@/components/Testimonials"));
 
 export const metadata: Metadata = {
-  title: `${siteConfig.name} | Tanzania Safaris, Kilimanjaro Trips, and Zanzibar Holidays`,
+  title: `${siteConfig.name} | Private Tanzania Safaris, Kilimanjaro, and Zanzibar`,
   description:
-    "Plan Tanzania safaris, Kilimanjaro climbs, and Zanzibar holidays with local support, clear advice, and custom routes that fit your travel style.",
+    "Plan private Tanzania safaris, Kilimanjaro climbs, Zanzibar holidays, and combined routes with clear local support around your dates, budget, and travel style.",
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: `${siteConfig.name} | Tanzania Safaris, Kilimanjaro Trips, and Zanzibar Holidays`,
+    title: `${siteConfig.name} | Private Tanzania Safaris, Kilimanjaro, and Zanzibar`,
     description:
-      "Plan Tanzania safaris, Kilimanjaro climbs, and Zanzibar holidays with local support and custom routes that fit your travel style.",
+      "Plan private Tanzania safaris, Kilimanjaro climbs, Zanzibar holidays, and combined routes with clear local support around your dates, budget, and travel style.",
     url: "/",
     images: [
       {
@@ -47,18 +47,18 @@ export default async function Home() {
 
   return (
     <main className="relative overflow-hidden">
-      <HomeAboutSection />
       <Hero content={homepageContent.hero} />
+      <HomeAboutSection />
       <StatsSection content={homepageContent.trust} />
-      <ProofSection />
-      <WhyChoose content={homepageContent.whyChoose} />
       <TravelStylesSection content={homepageContent.travelStyles} />
+      <TravelMomentsSection />
       <FeaturedPackages content={homepageContent.featuredPackages} />
+      <PricingGuidanceSection />
       <Destinations />
       <PlanningGuide content={homepageContent.planningGuide} />
       <BookWithConfidenceSection content={homepageContent.bookWithConfidence} />
+      <TrustEvidenceSection />
       <Testimonials content={homepageContent.testimonials} />
-      <PublicProfilesShowcase />
       <CTA content={homepageContent.finalCta} />
     </main>
   );

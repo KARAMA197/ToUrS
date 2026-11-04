@@ -2,14 +2,21 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ExternalLink } from "lucide-react";
 import type { HomepageContent } from "@/homepage-content-schema";
+import { getPublicProfileLinks } from "@/lib/business";
 
 type TestimonialsProps = {
   content: HomepageContent["testimonials"];
 };
 
 export default function Testimonials({ content }: TestimonialsProps) {
+  const socialProfiles = getPublicProfileLinks().filter((profile) =>
+    ["Instagram", "TikTok", "Facebook", "Tripadvisor", "Google Business Profile"].includes(
+      profile.label
+    )
+  );
+
   return (
     <section id="testimonials" className="relative scroll-mt-24 overflow-hidden px-6 py-24">
       <div className="pointer-events-none absolute inset-x-0 top-0 h-28 bg-[radial-gradient(circle_at_top,rgba(200,154,70,0.12),transparent_70%)]" />
@@ -26,7 +33,41 @@ export default function Testimonials({ content }: TestimonialsProps) {
           </p>
         </div>
 
-        <div className="mt-12 grid gap-6 lg:grid-cols-3">
+        {socialProfiles.length > 0 && (
+          <div className="mt-12 rounded-[30px] border border-[var(--border)] bg-[rgba(255,250,243,0.82)] p-6 shadow-[0_22px_60px_-46px_rgba(8,18,15,0.26)]">
+            <div className="flex flex-col gap-5 lg:flex-row lg:items-center lg:justify-between">
+              <div className="max-w-2xl">
+                <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[var(--gold)]">
+                  Social proof
+                </p>
+                <h3 className="font-display mt-3 text-3xl text-[var(--forest)]">
+                  Follow the brand where travelers already check updates.
+                </h3>
+                <p className="mt-3 text-sm leading-7 text-[color:rgba(19,32,24,0.72)]">
+                  These channels help visitors see the same business identity beyond the website
+                  while real traveler reviews and trip stories continue to grow.
+                </p>
+              </div>
+
+              <div className="flex flex-wrap gap-3">
+                {socialProfiles.map((profile) => (
+                  <a
+                    key={profile.label}
+                    href={profile.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-3 rounded-full border border-[var(--border)] bg-white px-5 py-3 text-sm font-semibold text-[var(--forest)] transition hover:border-[var(--gold)] hover:text-[var(--gold)]"
+                  >
+                    {profile.label}
+                    <ExternalLink size={15} />
+                  </a>
+                ))}
+              </div>
+            </div>
+          </div>
+        )}
+
+        <div className="mt-8 grid gap-6 lg:grid-cols-3">
           {content.reviews.map((review, index) => (
             <motion.article
               key={review.name}
@@ -64,8 +105,8 @@ export default function Testimonials({ content }: TestimonialsProps) {
 
         <div className="mt-10 rounded-[30px] border border-[var(--border)] bg-[rgba(255,250,243,0.78)] p-6 text-center shadow-[0_22px_60px_-46px_rgba(8,18,15,0.26)]">
           <p className="text-sm leading-7 text-[color:rgba(19,32,24,0.72)]">
-            As real traveler reviews, photos, and public feedback grow, we keep them in one honest
-            place instead of mixing them with generic sales copy.
+            We will only publish real traveler reviews and trip photos when they are ready to be
+            shared publicly. Until then, this section stays honest about what you can check today.
           </p>
           <Link
             href="/traveler-proof"

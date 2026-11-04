@@ -86,16 +86,16 @@ type PlanningGuideProps = {
 
 export default function PlanningGuide({ content }: PlanningGuideProps) {
   return (
-    <section id="travel-guide" className="relative scroll-mt-24 overflow-hidden px-6 py-24">
+    <section id="travel-guide" className="relative scroll-mt-24 overflow-hidden px-5 py-16 sm:px-6 sm:py-24">
       <div className="pointer-events-none absolute inset-x-0 top-0 h-24 bg-[linear-gradient(180deg,rgba(11,24,20,0.14),transparent)]" />
       <div className="pointer-events-none absolute inset-x-0 bottom-0 h-28 bg-[radial-gradient(circle_at_center,rgba(200,154,70,0.1),transparent_68%)]" />
       <div className="mx-auto max-w-7xl">
-        <div className="grid gap-10 lg:grid-cols-[0.88fr_1.12fr] lg:items-end">
+        <div className="grid gap-6 sm:gap-10 lg:grid-cols-[0.88fr_1.12fr] lg:items-end">
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[var(--gold)]">
               {content.eyebrow}
             </p>
-            <h2 className="font-display mt-3 max-w-2xl text-4xl text-[var(--forest)] sm:text-5xl">
+            <h2 className="font-display mt-3 max-w-2xl text-3xl text-[var(--forest)] sm:text-5xl">
               {content.title}
             </h2>
           </div>
@@ -107,14 +107,14 @@ export default function PlanningGuide({ content }: PlanningGuideProps) {
           </div>
         </div>
 
-        <div className="mt-12 grid gap-6 md:grid-cols-2">
+        <div className="mt-8 grid gap-4 sm:mt-12 sm:gap-6 md:grid-cols-2">
           {planningTopics.map((topic) => {
             const Icon = topic.icon;
 
             return (
               <article
                 key={topic.title}
-                className="rounded-[30px] border border-[var(--border)] bg-[rgba(255,255,255,0.82)] p-7 shadow-[0_24px_70px_-48px_rgba(8,18,15,0.42)] backdrop-blur"
+                className="rounded-[24px] border border-[var(--border)] bg-[rgba(255,255,255,0.82)] p-5 shadow-[0_24px_70px_-48px_rgba(8,18,15,0.42)] backdrop-blur sm:rounded-[30px] sm:p-7"
               >
                 <div className="flex items-center gap-3">
                   <div className="rounded-full bg-[var(--sand)] p-3 text-[var(--forest)]">
@@ -125,15 +125,15 @@ export default function PlanningGuide({ content }: PlanningGuideProps) {
                   </p>
                 </div>
 
-                <p className="mt-5 text-sm leading-7 text-[color:rgba(19,32,24,0.72)]">
+                <p className="mt-4 text-sm leading-6 text-[color:rgba(19,32,24,0.72)] sm:mt-5 sm:leading-7">
                   {topic.intro}
                 </p>
 
-                <div className="mt-6 space-y-4">
+                <div className="mt-5 space-y-3 sm:mt-6 sm:space-y-4">
                   {topic.points.map((point) => (
                     <div key={point} className="flex gap-3">
                       <span className="mt-2 h-2.5 w-2.5 shrink-0 rounded-full bg-[var(--gold)]" />
-                      <p className="text-sm leading-7 text-[var(--forest)]">{point}</p>
+                      <p className="text-sm leading-6 text-[var(--forest)] sm:leading-7">{point}</p>
                     </div>
                   ))}
                 </div>
@@ -142,28 +142,28 @@ export default function PlanningGuide({ content }: PlanningGuideProps) {
           })}
         </div>
 
-        <div className="mt-10 rounded-[34px] bg-[var(--forest)] p-8 text-white shadow-[0_34px_100px_-50px_rgba(8,18,15,0.82)] lg:p-10">
+        <div className="mt-8 rounded-[28px] bg-[var(--forest)] p-5 text-white shadow-[0_34px_100px_-50px_rgba(8,18,15,0.82)] sm:mt-10 sm:rounded-[34px] sm:p-8 lg:p-10">
           <div className="grid gap-8 lg:grid-cols-[1fr_0.95fr] lg:items-start">
             <div>
               <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[var(--gold-soft)]">
                 Popular Tanzania trip mixes
               </p>
-              <h3 className="font-display mt-4 max-w-2xl text-3xl sm:text-4xl">
+              <h3 className="font-display mt-4 max-w-2xl text-2xl sm:text-4xl">
                 Simple ways many travelers build their trip.
               </h3>
-              <p className="mt-5 max-w-2xl text-sm leading-8 text-white/72">
+              <p className="mt-4 max-w-2xl text-sm leading-7 text-white/72 sm:mt-5 sm:leading-8">
                 These are strong starting points, not fixed packages. We still shape the route
                 around your dates, group size, and budget.
               </p>
 
-              <div className="mt-8 grid gap-4">
+              <div className="mt-6 grid gap-3 sm:mt-8 sm:gap-4">
                 {tripMixes.map((mix) => {
                   const Icon = mix.icon;
 
                   return (
                     <article
                       key={mix.title}
-                      className="rounded-[26px] border border-white/10 bg-white/6 p-5 backdrop-blur"
+                      className="rounded-[22px] border border-white/10 bg-white/6 p-4 backdrop-blur sm:rounded-[26px] sm:p-5"
                     >
                       <div className="flex items-center gap-3">
                         <div className="rounded-full bg-white/10 p-3 text-[var(--gold-soft)]">
@@ -177,15 +177,15 @@ export default function PlanningGuide({ content }: PlanningGuideProps) {
                         </div>
                       </div>
 
-                      <p className="mt-4 text-sm leading-7 text-white/74">{mix.description}</p>
-                      <p className="mt-3 text-sm leading-7 text-[var(--gold-soft)]">{mix.bestFor}</p>
+                      <p className="mt-3 text-sm leading-6 text-white/74 sm:mt-4 sm:leading-7">{mix.description}</p>
+                      <p className="mt-3 text-sm leading-6 text-[var(--gold-soft)] sm:leading-7">{mix.bestFor}</p>
                     </article>
                   );
                 })}
               </div>
             </div>
 
-            <div className="rounded-[30px] border border-white/10 bg-white/6 p-6 backdrop-blur">
+            <div className="rounded-[24px] border border-white/10 bg-white/6 p-5 backdrop-blur sm:rounded-[30px] sm:p-6">
               <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[var(--gold-soft)]">
                 {content.advisorEyebrow}
               </p>

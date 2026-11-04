@@ -1,8 +1,8 @@
 {
   "hero": {
-    "eyebrow": "Brilliant Explore Safaris | Private Tanzania Travel",
-    "title": "Private Tanzania journeys planned with clear advice, smooth flow, and the right pace for you.",
-    "description": "Brilliant Explore Safaris helps travelers shape safari, Kilimanjaro, Zanzibar, and combined routes with careful guidance on season, comfort, timing, and how the whole journey fits together.",
+    "eyebrow": "Brilliant Explore Safaris | Tanzania Safari, Kilimanjaro, and Zanzibar",
+    "title": "Private Tanzania safaris, Kilimanjaro climbs, and Zanzibar holidays planned around you.",
+    "description": "Tell us your dates, group size, budget range, and the kind of trip you want. We shape a private Tanzania route with clear advice on season, pace, comfort, and how the whole journey fits together.",
     "highlights": [
       {
         "title": "Tanzania-based planning",
@@ -28,8 +28,8 @@
       }
     ],
     "featuredJourneyEyebrow": "Start with a strong route",
-    "featuredJourneyTitle": "A clear route first. Then we shape the details around you.",
-    "featuredJourneyDescription": "Use a well-balanced Tanzania route as the starting point, then refine the trip length, stay level, and overall rhythm around your own priorities."
+    "featuredJourneyTitle": "Start with safari, mountain, beach, or a route that combines them.",
+    "featuredJourneyDescription": "Choose the direction that feels closest, then we refine trip length, stay level, transport, and timing around your own priorities."
   },
   "trust": {
     "eyebrow": "Travel with confidence",
@@ -276,34 +276,34 @@
     "secondaryLabel": "Contact us directly"
   },
   "testimonials": {
-    "eyebrow": "What should feel strong",
-    "title": "The planning experience should feel clear before you commit.",
-    "description": "These are some of the things travelers should be able to feel early if the trip planning is being handled well.",
+    "eyebrow": "Social proof",
+    "title": "Check the brand, then look for a planning reply that feels useful.",
+    "description": "Our public proof should grow from real profiles, real traveler feedback, and clear planning standards. These are the signals we want visitors to be able to check honestly.",
     "reviews": [
       {
         "name": "Useful first direction",
-        "country": "Planning standard",
+        "country": "What to expect",
         "trip": "A reply that helps",
         "quote": "The first reply should not only thank you for reaching out. It should help you understand the route direction, pace, and the strongest next step for your trip."
       },
       {
         "name": "Route logic you can understand",
-        "country": "Planning standard",
+        "country": "What to expect",
         "trip": "Clear reasons behind the route",
         "quote": "A strong trip plan should make sense when it is explained. You should understand why the route fits your season, your priorities, and the kind of pace you want."
       },
       {
         "name": "Easy next step",
-        "country": "Planning standard",
+        "country": "What to expect",
         "trip": "No pressure, clear contact",
         "quote": "Before any commitment, it should feel easy to come back with questions, refine the route, and keep the same planning conversation moving forward."
       }
     ]
   },
   "finalCta": {
-    "eyebrow": "Start with your dates and travel style",
-    "title": "Tell us the trip you have in mind. We will shape a clear first route.",
-    "description": "You do not need a full brief to start. A few details are enough for us to recommend the right direction for your Tanzania journey.",
+    "eyebrow": "Start your Tanzania trip request",
+    "title": "Send your dates and travel style. We will reply with a clear first route.",
+    "description": "You do not need a full brief to start. Share the basics, and we will recommend the strongest direction for your Tanzania safari, climb, beach stay, or combined journey.",
     "decisionNotes": [
       "Reply within 24 hours",
       "Private trip planning",

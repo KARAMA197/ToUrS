@@ -6,6 +6,8 @@ import { ArrowRight, Compass, Mountain, Waves } from "lucide-react";
 import TrackedLink from "@/components/TrackedLink";
 import type { HomepageContent } from "@/homepage-content-schema";
 import { journeys } from "@/journeys-data";
+import { priceGuideNote } from "@/lib/pricing-guidance";
+import { buildTripPlanHref } from "@/lib/trip-plan";
 
 const iconMap = {
   compass: Compass,
@@ -19,21 +21,24 @@ type FeaturedPackagesProps = {
 
 export default function FeaturedPackages({ content }: FeaturedPackagesProps) {
   return (
-    <section id="featured-packages" className="scroll-mt-24 px-6 py-24">
+    <section id="featured-packages" className="scroll-mt-24 px-5 py-16 sm:px-6 sm:py-24">
       <div className="mx-auto max-w-7xl">
         <div className="max-w-3xl">
           <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[var(--gold)]">
             {content.eyebrow}
           </p>
-          <h2 className="font-display mt-3 text-4xl text-[var(--forest)] sm:text-5xl">
+          <h2 className="font-display mt-3 text-3xl text-[var(--forest)] sm:text-5xl">
             {content.title}
           </h2>
           <p className="mt-5 max-w-2xl text-base leading-8 text-[color:rgba(19,32,24,0.72)]">
             {content.description}
           </p>
+          <p className="mt-4 max-w-2xl rounded-[22px] border border-[rgba(16,37,28,0.1)] bg-[rgba(255,250,243,0.82)] px-4 py-3 text-sm leading-7 text-[color:rgba(19,32,24,0.68)]">
+            {priceGuideNote}
+          </p>
         </div>
 
-        <div className="mt-12 grid gap-6 lg:grid-cols-3">
+        <div className="mt-8 grid gap-5 sm:mt-12 sm:gap-6 lg:grid-cols-3">
           {journeys.map((journey, index) => {
             const Icon = iconMap[journey.iconKey];
 
@@ -46,7 +51,7 @@ export default function FeaturedPackages({ content }: FeaturedPackagesProps) {
                 viewport={{ once: true }}
                 className="overflow-hidden rounded-[32px] border border-[var(--border)] bg-[rgba(255,255,255,0.84)] shadow-[0_28px_80px_-48px_rgba(8,18,15,0.48)] backdrop-blur"
               >
-                <div className="relative h-80">
+                <div className="relative h-60 sm:h-80">
                   <Image
                     src={journey.image}
                     alt={journey.title}
@@ -60,20 +65,20 @@ export default function FeaturedPackages({ content }: FeaturedPackagesProps) {
                   </div>
                 </div>
 
-                <div className="p-6">
+                <div className="p-5 sm:p-6">
                   <div className="flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.2em] text-[var(--gold)]">
                     <Icon size={16} />
                     {journey.accent}
                   </div>
 
-                  <h3 className="font-display mt-4 text-3xl text-[var(--forest)]">
+                  <h3 className="font-display mt-4 text-2xl text-[var(--forest)] sm:text-3xl">
                     {journey.title}
                   </h3>
                   <p className="mt-3 text-sm leading-7 text-[color:rgba(19,32,24,0.72)]">
                     {journey.description}
                   </p>
 
-                  <div className="mt-6 flex items-end justify-between gap-6">
+                  <div className="mt-5 flex items-end justify-between gap-4 sm:mt-6 sm:gap-6">
                     <div>
                       <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[color:rgba(19,32,24,0.58)]">
                         Length
@@ -110,6 +115,22 @@ export default function FeaturedPackages({ content }: FeaturedPackagesProps) {
                     className="mt-8 inline-flex items-center gap-3 font-semibold text-[var(--forest)] transition hover:text-[var(--gold)]"
                   >
                     View full journey
+                    <ArrowRight size={16} />
+                  </TrackedLink>
+
+                  <TrackedLink
+                    href={buildTripPlanHref("/custom-itinerary", [
+                      { journeySlug: journey.slug, staySlugs: [] },
+                    ])}
+                    eventName="cta_click"
+                    eventParams={{
+                      section: "featured_packages",
+                      action: "start_with_journey",
+                      journey_slug: journey.slug,
+                    }}
+                    className="mt-4 inline-flex w-full items-center justify-center gap-3 rounded-full bg-[var(--forest)] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[var(--forest-soft)]"
+                  >
+                    Start with this route
                     <ArrowRight size={16} />
                   </TrackedLink>
                 </div>

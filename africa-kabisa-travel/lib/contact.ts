@@ -1,4 +1,4 @@
-﻿export const WHATSAPP_NUMBER = "255783428628";
+export const WHATSAPP_NUMBER = "255676882297";
 
 export const DEFAULT_WHATSAPP_MESSAGE =
   "Hello, I would like to plan a Tanzania safari.";

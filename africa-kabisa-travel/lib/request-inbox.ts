@@ -28,6 +28,7 @@ export type ReceivedRequestRoute = {
 
 export type ReceivedRequestDeliveryStatus =
   | "Delivered"
+  | "Email accepted"
   | "Awaiting WhatsApp follow-up"
   | "Needs attention";
 
@@ -56,6 +57,12 @@ export type ReceivedRequest = {
   stay: string;
   staySlug: string;
   stayCategory: string;
+  destinationTitle: string;
+  destinationSlug: string;
+  destinationRegion: string;
+  travelMomentTitle: string;
+  travelMomentSlug: string;
+  travelMomentLocation: string;
   contactPreference: string;
   followUpChannel: string;
   leadSource: string;
@@ -69,11 +76,11 @@ export type ReceivedRequest = {
   quotation: ReceivedRequestQuotation;
 };
 
-const dataDirectory = path.join(process.cwd(), "data");
-export const receivedRequestsFilePath = path.join(
-  dataDirectory,
-  "received-requests.json"
-);
+const configuredRequestsFilePath = process.env.RECEIVED_REQUESTS_FILE_PATH?.trim();
+export const receivedRequestsFilePath = configuredRequestsFilePath
+  ? path.resolve(configuredRequestsFilePath)
+  : path.join(process.cwd(), ".local-data", "received-requests.json");
+const dataDirectory = path.dirname(receivedRequestsFilePath);
 
 function normalizeReceivedRequest(request: ReceivedRequest) {
   const quotationSource: QuotationRequestSource = {
@@ -102,6 +109,12 @@ function normalizeReceivedRequest(request: ReceivedRequest) {
     tripLength: request.tripLength ?? "Not specified",
     tripStyle: request.tripStyle ?? "",
     tripStyleLabel: request.tripStyleLabel ?? "",
+    destinationTitle: request.destinationTitle ?? "",
+    destinationSlug: request.destinationSlug ?? "",
+    destinationRegion: request.destinationRegion ?? "",
+    travelMomentTitle: request.travelMomentTitle ?? "",
+    travelMomentSlug: request.travelMomentSlug ?? "",
+    travelMomentLocation: request.travelMomentLocation ?? "",
     quotation: normalizeQuotationDraft(quotationSource, request.quotation),
   };
 }

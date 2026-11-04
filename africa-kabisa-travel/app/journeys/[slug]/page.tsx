@@ -32,6 +32,10 @@ import {
   getRelatedJourneys,
 } from "@/journeys-data";
 import { siteConfig } from "@/lib/site";
+import {
+  buildTravelMomentExtras,
+  parseTravelMomentSlugsParam,
+} from "@/lib/travel-moments";
 
 const iconMap = {
   compass: Compass,
@@ -63,6 +67,8 @@ type JourneyDetailPageProps = {
     plan?: string | string[];
     routeIndex?: string | string[];
     stay?: string | string[];
+    moment?: string | string[];
+    moments?: string | string[];
   }>;
 };
 
@@ -82,19 +88,19 @@ export async function generateMetadata({
 
   if (!journey) {
     return {
-      title: `Journey not found | ${siteConfig.name}`,
+      title: "Journey not found",
     };
   }
 
   return {
-    title: `${journey.title} | ${siteConfig.name}`,
-    description: journey.description,
+    title: `${journey.title} Tanzania Itinerary`,
+    description: `${journey.description} Use this private Tanzania itinerary as a starting point, then shape dates, stays, pace, and budget around your trip.`,
     alternates: {
       canonical: `/journeys/${journey.slug}`,
     },
     openGraph: {
-      title: `${journey.title} | ${siteConfig.name}`,
-      description: journey.description,
+      title: `${journey.title} Tanzania Itinerary | ${siteConfig.name}`,
+      description: `${journey.description} Shape this route into a private Tanzania trip with local planning support.`,
       url: `/journeys/${journey.slug}`,
       images: [
         {
@@ -119,6 +125,11 @@ export default async function JourneyDetailPage({
   const routeIndex = parseRouteIndex(
     getSearchParamValue(resolvedSearchParams.routeIndex)
   );
+  const selectedMomentSlugs = parseTravelMomentSlugsParam(
+    getSearchParamValue(resolvedSearchParams.moments),
+    getSearchParamValue(resolvedSearchParams.moment)
+  );
+  const momentExtras = buildTravelMomentExtras(selectedMomentSlugs);
   const selectedStay = getAccommodationBySlug(
     getSearchParamValue(resolvedSearchParams.stay)
   );
@@ -152,17 +163,31 @@ export default async function JourneyDetailPage({
       ? [selectedStay]
       : [];
   const inquiryHref = hasPlanContext
-    ? buildTripPlanHref("/custom-itinerary", nextPlanWithJourney)
+    ? buildTripPlanHref("/custom-itinerary", nextPlanWithJourney, momentExtras)
     : selectedStay
-      ? `/custom-itinerary?journey=${journey.slug}&stay=${selectedStay.slug}`
-      : `/custom-itinerary?journey=${journey.slug}`;
+      ? buildTripPlanHref("/custom-itinerary", [], {
+          journey: journey.slug,
+          stay: selectedStay.slug,
+          ...momentExtras,
+        })
+      : buildTripPlanHref("/custom-itinerary", [], {
+          journey: journey.slug,
+          ...momentExtras,
+        });
   const secondaryHref = hasPlanContext
     ? buildTripPlanHref("/accommodation", nextPlanWithJourney, {
         routeIndex: activeRouteIndex,
+        ...momentExtras,
       })
     : selectedStay
-      ? `/journeys?stay=${selectedStay.slug}`
-      : `/accommodation?journey=${journey.slug}`;
+      ? buildTripPlanHref("/journeys", [], {
+          stay: selectedStay.slug,
+          ...momentExtras,
+        })
+      : buildTripPlanHref("/accommodation", [], {
+          journey: journey.slug,
+          ...momentExtras,
+        });
   const secondaryLabel = hasPlanContext
     ? "Preview stays for this route"
     : selectedStay

@@ -27,6 +27,7 @@ type AdminQuotationComposerProps = {
 
 type QuotationApiResponse = {
   error?: string;
+  emailAccepted?: boolean;
   request?: {
     quotation?: ReceivedRequestQuotation;
     leadStatus?: ReceivedRequestLeadStatus;
@@ -89,6 +90,7 @@ export default function AdminQuotationComposer({
   const [error, setError] = useState("");
   const [isSaving, setIsSaving] = useState(false);
   const [isSending, setIsSending] = useState(false);
+  const [acceptedWithoutSavedStatus, setAcceptedWithoutSavedStatus] = useState(false);
   const [isCopying, setIsCopying] = useState(false);
 
   const quotationSource = useMemo<QuotationRequestSource>(
@@ -228,6 +230,7 @@ export default function AdminQuotationComposer({
   };
 
   const handleSendEmail = async () => {
+    if (acceptedWithoutSavedStatus) return;
     setIsSending(true);
     setError("");
     setMessage("Sending quotation email...");
@@ -258,20 +261,23 @@ export default function AdminQuotationComposer({
         | QuotationApiResponse
         | null;
 
-      if (!response.ok) {
-        setError(payload?.error ?? "Could not send the quotation email.");
-        setMessage("Send failed.");
+      if (!response.ok || !payload?.emailAccepted || !payload.request?.quotation) {
+        setError(payload?.error ?? "We could not confirm the result. Check the email service before retrying to avoid sending a duplicate quotation.");
+        setAcceptedWithoutSavedStatus(payload?.emailAccepted === true);
+        setMessage(payload?.emailAccepted
+          ? "Email accepted; status needs attention."
+          : "Email acceptance was not confirmed.");
         return;
       }
 
       syncFromResponse(
         payload?.request?.quotation,
-        "Quotation sent to the traveler by email."
+        "The email service accepted the quotation. Delivery to the traveler's inbox is not yet confirmed."
       );
       router.refresh();
     } catch {
-      setError("Could not send the quotation email.");
-      setMessage("Send failed.");
+      setError("We could not confirm the result. Check the email service before retrying to avoid sending a duplicate quotation.");
+      setMessage("Email acceptance was not confirmed.");
     } finally {
       setIsSending(false);
     }
@@ -341,9 +347,16 @@ export default function AdminQuotationComposer({
       </div>
 
       {error ? (
-        <div className="mt-4 rounded-[20px] border border-[#d48f7b] bg-[#fff1ec] px-4 py-3 text-sm text-[#8a3e2a]">
+        <div role="alert" className="mt-4 rounded-[20px] border border-[#d48f7b] bg-[#fff1ec] px-4 py-3 text-sm text-[#8a3e2a]">
           {error}
         </div>
+      ) : null}
+
+      {acceptedWithoutSavedStatus ? (
+        <p role="alert" className="mt-4 rounded-[20px] border border-amber-300 bg-amber-50 px-4 py-3 text-sm text-amber-950">
+          The email service accepted this quotation, but its status could not be saved.
+          Do not resend it. Check the email service and resolve the inbox storage issue first.
+        </p>
       ) : null}
 
       <div className="mt-5 rounded-[20px] border border-[rgba(16,37,28,0.08)] bg-[var(--sand)]/55 px-4 py-3 text-sm leading-7 text-[color:rgba(19,32,24,0.72)]">
@@ -525,7 +538,7 @@ export default function AdminQuotationComposer({
           <button
             type="button"
             onClick={handleSendEmail}
-            disabled={isSaving || isSending}
+            disabled={isSaving || isSending || acceptedWithoutSavedStatus}
             className="inline-flex items-center justify-center rounded-full border border-[rgba(16,37,28,0.14)] bg-white px-5 py-3 text-sm font-semibold text-[var(--forest)] transition hover:border-[var(--gold)] hover:text-[var(--gold)] disabled:cursor-not-allowed disabled:opacity-60"
           >
             {isSending ? "Sending..." : "Send quotation by email"}

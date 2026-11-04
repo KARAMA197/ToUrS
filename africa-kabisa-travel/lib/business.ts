@@ -12,18 +12,26 @@ const publicProfileLinks = [
   },
   {
     label: "Instagram",
-    href: process.env.NEXT_PUBLIC_INSTAGRAM_URL ?? "",
+    href:
+      process.env.NEXT_PUBLIC_INSTAGRAM_URL ??
+      "https://www.instagram.com/brilliantexploresafaris/",
   },
   {
     label: "Facebook",
     href: process.env.NEXT_PUBLIC_FACEBOOK_URL ?? "",
+  },
+  {
+    label: "TikTok",
+    href:
+      process.env.NEXT_PUBLIC_TIKTOK_URL ??
+      "https://www.tiktok.com/@brilliantexploresafari",
   },
 ].filter((link) => Boolean(link.href));
 
 export const businessConfig = {
   name: siteConfig.name,
   phoneE164: `+${WHATSAPP_NUMBER}`,
-  phoneDisplay: "+255 783 428 628",
+  phoneDisplay: "+255 676 882 297",
   publicEmail: process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "",
   country: "Tanzania",
   baseLabel: "Tanzania-based planning team",

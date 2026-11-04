@@ -32,11 +32,17 @@ type RequestBoardItem = {
   travelDate: string;
   message: string;
   stayCategory: string;
+  destinationTitle: string;
+  destinationSlug: string;
+  destinationRegion: string;
+  travelMomentTitle: string;
+  travelMomentSlug: string;
+  travelMomentLocation: string;
   contactPreference: string;
   followUpChannel: string;
   leadSourceLabel: string;
   customerWhatsappFollowUpLink: string;
-  deliveryStatus: "Delivered" | "Awaiting WhatsApp follow-up" | "Needs attention";
+  deliveryStatus: import("@/lib/request-inbox").ReceivedRequestDeliveryStatus;
   leadStatus: ReceivedRequestLeadStatus;
   adminNote: string;
   quotation: ReceivedRequestQuotation;
@@ -100,8 +106,54 @@ function buildTripPlanCsvSummary(
     .join(" | ");
 }
 
+function buildRequestFollowUpBrief(request: RequestBoardItem) {
+  const contextLines = [
+    request.destinationTitle
+      ? `Destination: ${request.destinationTitle}${request.destinationRegion ? ` (${request.destinationRegion})` : ""}`
+      : "",
+    request.travelMomentTitle
+      ? `Travel moment: ${request.travelMomentTitle}${request.travelMomentLocation ? ` (${request.travelMomentLocation})` : ""}`
+      : "",
+    request.tripPlan.length > 0
+      ? `Trip plan: ${buildTripPlanCsvSummary(request.tripPlan)}`
+      : "",
+  ].filter(Boolean);
+
+  return [
+    `Reference: ${request.referenceId}`,
+    `Traveler: ${request.name}`,
+    `Selected request: ${request.selectedRequest}`,
+    `Follow-up channel: ${request.followUpChannel}`,
+    `Travelers: ${request.travelers}`,
+    `Trip length: ${request.tripLength}`,
+    `Travel date: ${request.travelDate}`,
+    `Budget: ${request.budget}`,
+    `Trip style: ${request.tripStyleLabel || "Not specified"}`,
+    ...contextLines,
+    "",
+    "Suggested opening:",
+    `Hi ${request.name}, thank you for reaching out to Brilliant Explore Safaris. We received your request for ${request.selectedRequest}. We are checking the best route, timing, and stay options, then we will send you a clear first plan.`,
+  ].join("\n");
+}
+
+function buildReplyMailtoHref(request: RequestBoardItem) {
+  const subject = `Re: ${request.selectedRequest} (${request.referenceId})`;
+  const body = [
+    `Hi ${request.name},`,
+    "",
+    `Thank you for reaching out to Brilliant Explore Safaris. We received your request for ${request.selectedRequest}.`,
+    "",
+    "We are checking the best route, timing, and stay options, then we will send you a clear first plan.",
+    "",
+    `Reference: ${request.referenceId}`,
+  ].join("\n");
+
+  return `mailto:${request.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+}
+
 export default function AdminRequestsBoard({ requests }: AdminRequestsBoardProps) {
   const [searchQuery, setSearchQuery] = useState("");
+  const [copiedReferenceId, setCopiedReferenceId] = useState("");
   const [leadStatusFilter, setLeadStatusFilter] = useState<
     "All" | ReceivedRequestLeadStatus
   >("All");
@@ -167,6 +219,12 @@ export default function AdminRequestsBoard({ requests }: AdminRequestsBoardProps
           request.referenceId,
           request.message,
           request.tripStyleLabel,
+          request.destinationTitle,
+          request.destinationSlug,
+          request.destinationRegion,
+          request.travelMomentTitle,
+          request.travelMomentSlug,
+          request.travelMomentLocation,
           request.leadSourceLabel,
           request.adminNote,
           request.quotation.subject,
@@ -312,6 +370,12 @@ export default function AdminRequestsBoard({ requests }: AdminRequestsBoardProps
       "Budget",
       "Travel Date",
       "Stay Category",
+      "Destination",
+      "Destination Slug",
+      "Destination Region",
+      "Travel Moment",
+      "Travel Moment Slug",
+      "Travel Moment Location",
       "Contact Preference",
       "Follow-up Channel",
       "Lead Source",
@@ -349,11 +413,19 @@ export default function AdminRequestsBoard({ requests }: AdminRequestsBoardProps
       request.budget,
       request.travelDate,
       request.stayCategory || "Not provided",
+      request.destinationTitle || "Not provided",
+      request.destinationSlug || "Not provided",
+      request.destinationRegion || "Not provided",
+      request.travelMomentTitle || "Not provided",
+      request.travelMomentSlug || "Not provided",
+      request.travelMomentLocation || "Not provided",
       request.contactPreference,
       request.followUpChannel,
       request.leadSourceLabel,
       request.leadStatus,
-      request.deliveryStatus,
+      request.deliveryStatus === "Delivered"
+        ? "Previously marked delivered"
+        : request.deliveryStatus,
       request.quotation.status,
       request.quotation.quotedAmount,
       request.quotation.validUntil,
@@ -614,7 +686,10 @@ export default function AdminRequestsBoard({ requests }: AdminRequestsBoardProps
         </section>
       ) : (
         <section className="space-y-6">
-          {paginatedRequests.map((request) => (
+          {paginatedRequests.map((request) => {
+            const followUpBrief = buildRequestFollowUpBrief(request);
+
+            return (
             <article
               key={`${request.referenceId}-${request.submittedAt}`}
               className="rounded-[32px] border border-[var(--border)] bg-[rgba(255,255,255,0.92)] p-7 shadow-[0_24px_80px_-50px_rgba(8,18,15,0.42)]"
@@ -659,7 +734,9 @@ export default function AdminRequestsBoard({ requests }: AdminRequestsBoardProps
                     {request.leadStatus}
                   </span>
                   <span className="rounded-full border border-[rgba(16,37,28,0.12)] bg-[var(--sand)] px-4 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-[var(--forest)]">
-                    {request.deliveryStatus}
+                    {request.deliveryStatus === "Delivered"
+                      ? "Previously marked delivered"
+                      : request.deliveryStatus}
                   </span>
                   <span className="rounded-full border border-[rgba(16,37,28,0.12)] bg-white px-4 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-[var(--gold)]">
                     Quote: {request.quotation.status}
@@ -741,12 +818,63 @@ export default function AdminRequestsBoard({ requests }: AdminRequestsBoardProps
                       <p><span className="font-semibold">Budget:</span> {request.budget}</p>
                       <p><span className="font-semibold">Travel date:</span> {request.travelDate}</p>
                       <p><span className="font-semibold">Stay category:</span> {request.stayCategory || "Not provided"}</p>
+                      <p><span className="font-semibold">Destination:</span> {request.destinationTitle || "Not provided"}</p>
+                      <p><span className="font-semibold">Travel moment:</span> {request.travelMomentTitle || "Not provided"}</p>
                     </div>
+                  </div>
+
+                  {(request.destinationTitle || request.travelMomentTitle) && (
+                    <div className="rounded-[24px] border border-[var(--border)] bg-white p-5">
+                      <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[var(--gold)]">
+                        Selected context
+                      </p>
+                      <div className="mt-4 space-y-3 text-sm leading-7 text-[var(--forest)]">
+                        {request.destinationTitle ? (
+                          <div>
+                            <p className="font-semibold">{request.destinationTitle}</p>
+                            <p className="text-[color:rgba(19,32,24,0.68)]">
+                              Destination{request.destinationRegion ? ` • ${request.destinationRegion}` : ""}
+                              {request.destinationSlug ? ` • ${request.destinationSlug}` : ""}
+                            </p>
+                          </div>
+                        ) : null}
+                        {request.travelMomentTitle ? (
+                          <div>
+                            <p className="font-semibold">{request.travelMomentTitle}</p>
+                            <p className="text-[color:rgba(19,32,24,0.68)]">
+                              Travel moment{request.travelMomentLocation ? ` • ${request.travelMomentLocation}` : ""}
+                              {request.travelMomentSlug ? ` • ${request.travelMomentSlug}` : ""}
+                            </p>
+                          </div>
+                        ) : null}
+                      </div>
+                    </div>
+                  )}
+
+                  <div className="rounded-[24px] border border-[var(--border)] bg-white p-5">
+                    <div className="flex flex-wrap items-center justify-between gap-3">
+                      <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[var(--gold)]">
+                        Quick follow-up brief
+                      </p>
+                      <button
+                        type="button"
+                        onClick={async () => {
+                          await navigator.clipboard.writeText(followUpBrief);
+                          setCopiedReferenceId(request.referenceId);
+                        }}
+                        className="inline-flex items-center justify-center rounded-full border border-[rgba(16,37,28,0.12)] px-4 py-2 text-xs font-semibold uppercase tracking-[0.14em] text-[var(--forest)] transition hover:border-[var(--gold)] hover:text-[var(--gold)]"
+                      >
+                        {copiedReferenceId === request.referenceId ? "Copied" : "Copy brief"}
+                      </button>
+                    </div>
+                    <pre className="mt-4 whitespace-pre-wrap rounded-[18px] bg-[var(--sand)]/60 p-4 text-xs leading-6 text-[color:rgba(19,32,24,0.74)]">
+                      {followUpBrief}
+                    </pre>
                   </div>
 
                   <div className="flex flex-wrap gap-3">
                     <a
-                      href={`mailto:${request.email}`}
+                      href={buildReplyMailtoHref(request)}
                       className="inline-flex items-center justify-center rounded-full bg-[var(--forest)] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[var(--forest-soft)]"
                     >
                       Reply by email
@@ -847,7 +975,8 @@ export default function AdminRequestsBoard({ requests }: AdminRequestsBoardProps
                 </div>
               </div>
             </article>
-          ))}
+            );
+          })}
 
           {totalPages > 1 ? (
             <div className="flex flex-wrap items-center justify-between gap-4 rounded-[28px] border border-[var(--border)] bg-[rgba(255,255,255,0.92)] p-5 shadow-[0_18px_50px_-40px_rgba(8,18,15,0.3)]">

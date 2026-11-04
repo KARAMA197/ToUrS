@@ -6,16 +6,16 @@ import { destinations } from "@/destinations-data";
 import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: `Tanzania Destinations | ${siteConfig.name}`,
+  title: "Tanzania Safari, Kilimanjaro, and Zanzibar Destinations",
   description:
-    "Explore Tanzania destinations for safari, Kilimanjaro, Zanzibar, southern parks, and cultural add-ons before shaping the right route.",
+    "Compare Tanzania safari destinations, Kilimanjaro, Zanzibar, southern parks, and cultural add-ons before planning a private route around your dates and budget.",
   alternates: {
     canonical: "/destinations",
   },
   openGraph: {
     title: `Tanzania Destinations | ${siteConfig.name}`,
     description:
-      "Explore Tanzania destinations for safari, Kilimanjaro, Zanzibar, southern parks, and cultural add-ons.",
+      "Compare Tanzania safari destinations, Kilimanjaro, Zanzibar, southern parks, and cultural add-ons before shaping a private route.",
     url: "/destinations",
     images: [
       {
@@ -42,7 +42,7 @@ export default function DestinationsPage() {
               Tanzania destinations
             </p>
             <h1 className="font-display mt-3 text-4xl text-[var(--forest)] sm:text-5xl">
-              Places worth building a route around.
+              Tanzania places worth building a private route around.
             </h1>
             <p className="mt-5 max-w-2xl text-base leading-8 text-[color:rgba(19,32,24,0.72)]">
               Some places work best for classic safari. Others are stronger for mountain travel,
@@ -132,13 +132,21 @@ export default function DestinationsPage() {
                   ))}
                 </div>
 
-                <Link
-                  href={`/destinations/${destination.slug}`}
-                  className="mt-8 inline-flex items-center gap-3 font-semibold text-[var(--forest)] transition hover:text-[var(--gold)]"
-                >
-                  Explore this place
-                  <ArrowRight size={16} />
-                </Link>
+                <div className="mt-8 flex flex-wrap gap-3">
+                  <Link
+                    href={`/destinations/${destination.slug}`}
+                    className="inline-flex items-center gap-3 font-semibold text-[var(--forest)] transition hover:text-[var(--gold)]"
+                  >
+                    Explore this place
+                    <ArrowRight size={16} />
+                  </Link>
+                  <Link
+                    href={`/custom-itinerary?destination=${destination.slug}`}
+                    className="inline-flex items-center justify-center rounded-full bg-[var(--forest)] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[var(--forest-soft)]"
+                  >
+                    Plan around it
+                  </Link>
+                </div>
               </div>
             </article>
           ))}
@@ -147,4 +155,3 @@ export default function DestinationsPage() {
     </main>
   );
 }
-
